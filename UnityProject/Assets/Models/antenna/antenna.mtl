@@ -1,0 +1,15 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.197435470)
+
+newmtl ant_mat_3
+kd 0.8 0.8 0.8
+illum 1
+
+newmtl ant_mat_2
+kd 0.8 0.8 0.8
+illum 1
+
+newmtl ant_mat_1
+kd 0.8 0.8 0.8
+illum 1
+
