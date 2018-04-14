@@ -3,17 +3,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class AutoFigure : PhotonBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler {
-    public Canvas canvas;
+public class AutoFigure : PhotonBehaviour, IAutoFigure, IPointerEnterHandler, IPointerExitHandler {
+    private Canvas _canvas;
+    private Text _text;
     void Awake( ) {
-        canvas = this.GetComponentInParent<Canvas>( );
+        _canvas = this.GetComponentInParent<Canvas>( );
+        _text = this.GetComponentInChildren<Text>( );
     }
 	// Use this for initialization
-	void Start () {
+	void Start ( ) {
 		
 	}
+
+    public string text {
+        set {
+            if ( _text != null )
+                _text.text = value;
+        }
+    }
 
     float _lastMouseX = 0;
     int _mod = 1;
@@ -24,11 +34,15 @@ public class AutoFigure : PhotonBehaviour, IPointerDownHandler, IPointerUpHandle
             return;
         if ( Input.GetMouseButton( 0 ) ) {
             Vector2 pos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle( canvas.transform as RectTransform, Input.mousePosition, canvas.worldCamera, out pos );
-            this.transform.position = canvas.transform.TransformPoint( pos );
+            RectTransformUtility.ScreenPointToLocalPointInRectangle( _canvas.transform as RectTransform, Input.mousePosition, _canvas.worldCamera, out pos );
+            this.transform.position = _canvas.transform.TransformPoint( pos );
         }
         if ( Input.GetMouseButton( 1 ) ) {
-            this.transform.Rotate( new Vector3( 0, 0, _mod * 5 ) );
+            this.transform.Rotate( new Vector3( 0, 0, _mod * 2.5f ) );
+        }
+
+        if ( Input.GetMouseButton( 2 ) ) {
+            Destroy( this.gameObject );
         }
 
         if ( Input.GetAxis( "Mouse ScrollWheel" ) < 0 ) {
@@ -48,14 +62,6 @@ public class AutoFigure : PhotonBehaviour, IPointerDownHandler, IPointerUpHandle
     }
 
     private bool _selected = false;
-
-    public void OnPointerDown( PointerEventData eventData ) { 
-        //Debug.Log( "OnMouseDown" );
-    }
-
-    public void OnPointerUp( PointerEventData eventData ) {
-        //Debug.Log( "OnMouseUp" );
-    }
 
     public void OnPointerEnter( PointerEventData eventData ) {
         _selected = true;
