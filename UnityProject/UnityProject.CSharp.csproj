@@ -118,6 +118,7 @@
     <Compile Include="Assets\Scripts\Blocks\Diod.cs" />
     <Compile Include="Assets\Scripts\Blocks\Mielophone\MielophoneLogic.cs" />
     <Compile Include="Assets\Scripts\Blocks\Switch.cs" />
+    <Compile Include="Assets\Scripts\CloudRotation.cs" />
     <Compile Include="Assets\Scripts\Drawing\Paint.cs" />
     <Compile Include="Assets\Scripts\Drawing\TestDraw.cs" />
     <Compile Include="Assets\Scripts\Element\Block_Button.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Assets\Scripts\PhotonServer\PhotonManager.cs" />
     <Compile Include="Assets\Scripts\PhotonServer\PhotonServerTCP.cs" />
     <Compile Include="Assets\Scripts\PhotonServer\ThreadPhotonServer.cs" />
+    <Compile Include="Assets\Scripts\RevealNightEarthTexture.cs" />
     <Compile Include="Assets\Scripts\Settings\ApplicationConfig.cs" />
     <Compile Include="Assets\Scripts\Settings\Scenario\XmlItem.cs" />
     <Compile Include="Assets\Scripts\Settings\Scenario\XmlScenario.cs" />
@@ -164,6 +166,7 @@
   <ItemGroup>
     <None Include="Assets\Plugins\PhotonServer\Photon3Unity3D.xml" />
     <None Include="Assets\Plugins\PhotonServer\UnityEngine.xml" />
+    <None Include="Assets\Shaders\DisplayNightEarthTexture.shader" />
     <None Include="Assets\Sprites\SolarSystem\nasa\license.txt" />
     <None Include="Assets\Sprites\SolarSystem\solarsystemscope\license.txt" />
     <None Include="Assets\StreamingAssets\Application\scenario.xml" />
