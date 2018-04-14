@@ -7,12 +7,8 @@ using UnityEngine.EventSystems;
 
 public class AutoFigure : PhotonBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler {
     public Canvas canvas;
-    private RectTransform _rectTransform;
-
-
-
     void Awake( ) {
-        _rectTransform = this.GetComponent<RectTransform>( );
+        canvas = this.GetComponentInParent<Canvas>( );
     }
 	// Use this for initialization
 	void Start () {
@@ -36,11 +32,9 @@ public class AutoFigure : PhotonBehaviour, IPointerDownHandler, IPointerUpHandle
         }
 
         if ( Input.GetAxis( "Mouse ScrollWheel" ) < 0 ) {
-            Debug.Log( "+" );
             this.transform.localScale += new Vector3( 0.1f, 0.1f, 0.1f );
         }
         if ( Input.GetAxis( "Mouse ScrollWheel" ) > 0 ) {
-            Debug.Log( "-" );
             this.transform.localScale -= new Vector3( 0.1f, 0.1f, 0.1f );
         }
 
