@@ -37,8 +37,8 @@ public class AutoFigureController : PhotonBehaviour {
     private void Owner_Change( object Sender, object Value ) {
         switch ( this.isOwner.Value ) {
             case CodeOwner.@true: {
-                    OnInstanceAutoFigure( "стрелка", "1" );
-                    OnInstanceAutoFigure( "круг", "1" );
+                    OnInstanceAutoFigure( "arrow", "1" );
+                    OnInstanceAutoFigure( "arrow", "2" );
                 }
                 break;
         }
