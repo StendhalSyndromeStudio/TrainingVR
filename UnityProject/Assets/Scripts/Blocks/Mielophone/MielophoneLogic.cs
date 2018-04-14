@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using PhotonNetwork;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
-public class MielophoneLogic : MonoBehaviour {
+public class MielophoneLogic : PhotonBehaviour {
 
     public Transform antennAzimut;
     public Transform antennAnglePlace;
@@ -29,7 +31,7 @@ public class MielophoneLogic : MonoBehaviour {
     IEnumerator toLeft( ) {
         while ( rotate ) {
             if ( antennAzimut != null )
-                antennAzimut.Rotate( new Vector3( 0, 1, 0 ) );
+                antennAzimut.Rotate( new Vector3( 0, 0, 1 ) );
             makeData( _azimut--, _anglePlace );
             yield return new WaitForSeconds( 0.05f );
         }
@@ -39,7 +41,7 @@ public class MielophoneLogic : MonoBehaviour {
     IEnumerator toRight( ) {
         while ( rotate ) {
             if ( antennAzimut != null )
-                antennAzimut.Rotate( new Vector3( 0, -1, 0 ) );
+                antennAzimut.Rotate( new Vector3( 0, 0, -1 ) );
             makeData( _azimut++, _anglePlace );
             yield return new WaitForSeconds( 0.05f );
         }
@@ -98,8 +100,20 @@ public class MielophoneLogic : MonoBehaviour {
     int _azimut = 0;
     int _anglePlace = 0;
 
-	// Use this for initialization
-	void Start () {
+    /// <summary>
+    /// ПОЛЕ: Упраление состоянием дисплея
+    /// </summary>
+    [PhotonNetwork.Photon]
+    private readonly UnityClientKSGT.EventValueType<string> _status = new UnityClientKSGT.EventValueType<string>( string.Empty );
+
+    void Awake( ) {
+        this._status.AddingEvent( this, this.Status_Change );
+        this.isOwner.AddingEvent( this, this.Owner_Change );
+    }
+
+   
+    // Use this for initialization
+    void Start () {
         onChangePower( false );
         switchVkl.onChangeSwitch += this.onVkl;
         btns [ ( int ) Btns.BtnDown ].onPress += onBtnDownPressed;
@@ -113,7 +127,7 @@ public class MielophoneLogic : MonoBehaviour {
     void makeData( int azimut, int anglePlace ) {
         string strAzimut = "Азимут:" + azimut.ToString( );
         string strAnglePlace = "Угол места:" + anglePlace.ToString( );
-        display.text = strAzimut + "\n" + strAnglePlace;
+        this._status.Value = strAzimut + "\n" + strAnglePlace;
     }
 
     bool power = false;
@@ -189,15 +203,32 @@ public class MielophoneLogic : MonoBehaviour {
 
     void onChangePower( bool value ) {
         if ( value ) {
-            display.text = MIELOPHONE;
+            this._status.Value = MIELOPHONE;
             makeData( _azimut, _anglePlace );
             StartCoroutine( BlinkOkNo( ) );
         }
         else {
             StopAllCoroutines( );
-            display.text = string.Empty;
+            this._status.Value = string.Empty;
             diods [ ( int ) Diods.DiodOk ].onChangeStatus( 0 );
             diods [ ( int ) Diods.DiodNo ].onChangeStatus( 0 );
         }
     }
+
+    /// <summary>
+    /// МЕТОД: Изменение хозяина
+    /// </summary>
+    private void Owner_Change( object Sender, object Value ) {
+        this.enabled = this.isOwner.Value == CodeOwner.@true;
+    }
+
+    /// <summary>
+    /// МЕТОД: Изменение текста на дисплее
+    /// </summary>
+    /// <param name="Sender"></param>
+    /// <param name="Value"></param>
+    private void Status_Change( object Sender, object Value ) {
+        this.display.text = this._status.Value;
+    }
+
 }
