@@ -18,6 +18,8 @@ public class EyePair : MonoBehaviour {
 
     public VRCursor Cursor { get { return _Cursor; } }
 
+    private GameObject prevTarget;
+
     private bool InitLeftEye ( ) {
         if ( _Left != null )
         {
@@ -80,6 +82,7 @@ public class EyePair : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        prevTarget = null;
         if ( !InitEyes( ) ) {
             Debug.LogError( "Can't init eyes! Make sure you are set left and right eyes" );
         }
@@ -93,6 +96,24 @@ public class EyePair : MonoBehaviour {
 	void Update () {
         if ( _Cursor == null ) {
             Debug.Log( "Cursor is null!" );
+            if ( prevTarget != null ) {
+                //ISelectHandler, IDeselectHandler
+                var buttons = prevTarget.GetComponents<UnityEngine.EventSystems.IDeselectHandler>( );
+                if ( buttons != null )
+                {
+                    Debug.Log( "button != null" );
+
+                    foreach ( var item in buttons )
+                    {
+                        var data = new UnityEngine.EventSystems.BaseEventData(UnityEngine.EventSystems.EventSystem.current);
+                        item.OnDeselect( data );
+
+                    }
+
+                    //button.onClick.Invoke( );
+                }
+            }
+            prevTarget = null;
         }
         else {
             var target = _Cursor.Target;
@@ -101,23 +122,70 @@ public class EyePair : MonoBehaviour {
             {
                 //Debug.Log( target.name );
             }
-            if ( Input.GetMouseButtonUp( 0 ) ) {
-                Debug.Log( "MouseUp" );
+
+            if ( prevTarget != null && target != prevTarget )
+            {
+                //ISelectHandler, IDeselectHandler
+                var buttons = prevTarget.GetComponents<UnityEngine.EventSystems.IDeselectHandler>( );
+                if ( buttons != null )
+                {
+                    Debug.Log( "button != null" );
+
+                    foreach ( var item in buttons )
+                    {
+                        var data = new UnityEngine.EventSystems.BaseEventData(UnityEngine.EventSystems.EventSystem.current);
+                        item.OnDeselect( data );
+
+                    }
+
+                    //button.onClick.Invoke( );
+                }
+            }
+
+            if ( Input.GetMouseButtonDown( 0 ) ) {
                 if ( target != null )
                 {
                     Debug.Log( target.name );
-                    var button = target.GetComponents<UnityEngine.EventSystems.IPointerClickHandler>( );
-                    if ( button != null )
+                    var buttons = target.GetComponents<UnityEngine.EventSystems.IPointerDownHandler>( );
+                    if ( buttons != null )
                     {
                         Debug.Log( "button != null" );
-                        
-                        foreach(var item in button )
+
+                        foreach ( var item in buttons )
                         {
                             var data = new UnityEngine.EventSystems.PointerEventData(UnityEngine.EventSystems.EventSystem.current);
                             data.button = UnityEngine.EventSystems.PointerEventData.InputButton.Left;
                             var pos = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
                             data.position = pos;
                             data.pressPosition = pos;
+                            data.selectedObject = target;
+                            item.OnPointerDown( data );
+
+                        }
+
+                        //button.onClick.Invoke( );
+                    }
+                }
+            }
+            
+            if ( Input.GetMouseButtonUp( 0 ) ) {
+                Debug.Log( "MouseUp" );
+                if ( target != null )
+                {
+                    Debug.Log( target.name );
+                    var buttons = target.GetComponents<UnityEngine.EventSystems.IPointerClickHandler>( );
+                    if ( buttons != null )
+                    {
+                        Debug.Log( "button != null" );
+                        
+                        foreach(var item in buttons )
+                        {
+                            var data = new UnityEngine.EventSystems.PointerEventData(UnityEngine.EventSystems.EventSystem.current);
+                            data.button = UnityEngine.EventSystems.PointerEventData.InputButton.Left;
+                            var pos = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
+                            data.position = pos;
+                            data.pressPosition = pos;
+                            data.selectedObject = target;
                             item.OnPointerClick( data );
                             
                         }
@@ -125,8 +193,53 @@ public class EyePair : MonoBehaviour {
                         //button.onClick.Invoke( );
                     }
                 }
-                
+                if ( target != null )
+                {
+                    Debug.Log( target.name );
+                    var buttons = target.GetComponents<UnityEngine.EventSystems.IPointerUpHandler>( );
+                    if ( buttons != null )
+                    {
+                        Debug.Log( "button != null" );
+
+                        foreach ( var item in buttons )
+                        {
+                            var data = new UnityEngine.EventSystems.PointerEventData(UnityEngine.EventSystems.EventSystem.current);
+                            data.button = UnityEngine.EventSystems.PointerEventData.InputButton.Left;
+                            var pos = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
+                            data.position = pos;
+                            data.pressPosition = pos;
+                            data.selectedObject = target;
+                            item.OnPointerUp( data );
+
+                        }
+
+                        //button.onClick.Invoke( );
+                    }
+                }
             }
+
+
+            if ( target != null && target != prevTarget )
+            {
+                var buttons = target.GetComponents<UnityEngine.EventSystems.ISelectHandler>( );
+                if ( buttons != null )
+                {
+                    Debug.Log( "button != null" );
+
+                    foreach ( var item in buttons )
+                    {
+                        var data = new UnityEngine.EventSystems.BaseEventData(UnityEngine.EventSystems.EventSystem.current);
+                        data.selectedObject = target;
+                        item.OnSelect( data );
+
+                    }
+
+                    //button.onClick.Invoke( );
+                }
+            }
+            prevTarget = target;
+
+
         }
         
 	}
