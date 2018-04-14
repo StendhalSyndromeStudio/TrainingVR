@@ -13,11 +13,18 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+<<<<<<< HEAD
     <UnityVersion>5.6.0p4</UnityVersion>
     <RootNamespace></RootNamespace>
+=======
+    <UnityVersion>5.6.5f1</UnityVersion>
+    <RootNamespace>
+    </RootNamespace>
+>>>>>>> origin/master
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -129,6 +136,7 @@
     <Compile Include="Assets\Scripts\Menus\Lecturer\LecturerMenus.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuScenario\ButtonItem.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuScenario\MainScenario.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\MainTraining.cs" />
     <Compile Include="Assets\Scripts\Menus\ManagerMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\MenuDescription.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\CodeCommands.cs" />
