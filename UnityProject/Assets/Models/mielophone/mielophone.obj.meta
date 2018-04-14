@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 6923e7f5bbdc22a4aa2f2fd601b939c1
+timeCreated: 1523719152
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: btn_base.001_btn_base.001
+    100002: btn_base.002_btn_base.002
+    100004: btn_base.003_btn_base.003
+    100006: btn_base.004_btn_base.004
+    100008: btn_base.005_btn_base.005
+    100010: btn_bottom_btn_bottom
+    100012: btn_left_btn_left
+    100014: btn_right_btn_right
+    100016: btn_stop_btn_stop
+    100018: btn_top_btn_top
+    100020: diod_bottom_diod_bottom
+    100022: diod_error_diod_error
+    100024: diod_left_diod_left
+    100026: diod_no_diod_no
+    100028: diod_ok_diod_ok
+    100030: diod_right_diod_right
+    100032: diod_top_diod_top
+    100034: diod_wait_diod_wait
+    100036: display_display
+    100038: led_case.001_led_case.001
+    100040: led_case.002_led_case.002
+    100042: led_case.003_led_case.003
+    100044: led_case.004_led_case.004
+    100046: led_case.005_led_case.005
+    100048: led_case.006_led_case.006
+    100050: led_case.007_led_case.007
+    100052: led_case_led_case
+    100054: mielofon_mielofon
+    100056: //RootNode
+    100058: socket_socket
+    100060: tog_tog
+    100062: toggle_toggle
+    100064: "\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002_\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002"
+    400000: btn_base.001_btn_base.001
+    400002: btn_base.002_btn_base.002
+    400004: btn_base.003_btn_base.003
+    400006: btn_base.004_btn_base.004
+    400008: btn_base.005_btn_base.005
+    400010: btn_bottom_btn_bottom
+    400012: btn_left_btn_left
+    400014: btn_right_btn_right
+    400016: btn_stop_btn_stop
+    400018: btn_top_btn_top
+    400020: diod_bottom_diod_bottom
+    400022: diod_error_diod_error
+    400024: diod_left_diod_left
+    400026: diod_no_diod_no
+    400028: diod_ok_diod_ok
+    400030: diod_right_diod_right
+    400032: diod_top_diod_top
+    400034: diod_wait_diod_wait
+    400036: display_display
+    400038: led_case.001_led_case.001
+    400040: led_case.002_led_case.002
+    400042: led_case.003_led_case.003
+    400044: led_case.004_led_case.004
+    400046: led_case.005_led_case.005
+    400048: led_case.006_led_case.006
+    400050: led_case.007_led_case.007
+    400052: led_case_led_case
+    400054: mielofon_mielofon
+    400056: //RootNode
+    400058: socket_socket
+    400060: tog_tog
+    400062: toggle_toggle
+    400064: "\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002_\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002"
+    2300000: btn_base.001_btn_base.001
+    2300002: btn_base.002_btn_base.002
+    2300004: btn_base.003_btn_base.003
+    2300006: btn_base.004_btn_base.004
+    2300008: btn_base.005_btn_base.005
+    2300010: btn_bottom_btn_bottom
+    2300012: btn_left_btn_left
+    2300014: btn_right_btn_right
+    2300016: btn_stop_btn_stop
+    2300018: btn_top_btn_top
+    2300020: diod_bottom_diod_bottom
+    2300022: diod_error_diod_error
+    2300024: diod_left_diod_left
+    2300026: diod_no_diod_no
+    2300028: diod_ok_diod_ok
+    2300030: diod_right_diod_right
+    2300032: diod_top_diod_top
+    2300034: diod_wait_diod_wait
+    2300036: display_display
+    2300038: led_case.001_led_case.001
+    2300040: led_case.002_led_case.002
+    2300042: led_case.003_led_case.003
+    2300044: led_case.004_led_case.004
+    2300046: led_case.005_led_case.005
+    2300048: led_case.006_led_case.006
+    2300050: led_case.007_led_case.007
+    2300052: led_case_led_case
+    2300054: mielofon_mielofon
+    2300056: socket_socket
+    2300058: tog_tog
+    2300060: toggle_toggle
+    2300062: "\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002_\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002"
+    3300000: btn_base.001_btn_base.001
+    3300002: btn_base.002_btn_base.002
+    3300004: btn_base.003_btn_base.003
+    3300006: btn_base.004_btn_base.004
+    3300008: btn_base.005_btn_base.005
+    3300010: btn_bottom_btn_bottom
+    3300012: btn_left_btn_left
+    3300014: btn_right_btn_right
+    3300016: btn_stop_btn_stop
+    3300018: btn_top_btn_top
+    3300020: diod_bottom_diod_bottom
+    3300022: diod_error_diod_error
+    3300024: diod_left_diod_left
+    3300026: diod_no_diod_no
+    3300028: diod_ok_diod_ok
+    3300030: diod_right_diod_right
+    3300032: diod_top_diod_top
+    3300034: diod_wait_diod_wait
+    3300036: display_display
+    3300038: led_case.001_led_case.001
+    3300040: led_case.002_led_case.002
+    3300042: led_case.003_led_case.003
+    3300044: led_case.004_led_case.004
+    3300046: led_case.005_led_case.005
+    3300048: led_case.006_led_case.006
+    3300050: led_case.007_led_case.007
+    3300052: led_case_led_case
+    3300054: mielofon_mielofon
+    3300056: socket_socket
+    3300058: tog_tog
+    3300060: toggle_toggle
+    3300062: "\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002_\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002"
+    4300000: btn_base.001_btn_base.001
+    4300002: btn_base.002_btn_base.002
+    4300004: btn_base.003_btn_base.003
+    4300006: btn_base.004_btn_base.004
+    4300008: btn_base.005_btn_base.005
+    4300010: btn_bottom_btn_bottom
+    4300012: btn_left_btn_left
+    4300014: btn_right_btn_right
+    4300016: btn_stop_btn_stop
+    4300018: btn_top_btn_top
+    4300020: diod_bottom_diod_bottom
+    4300022: diod_error_diod_error
+    4300024: diod_left_diod_left
+    4300026: diod_no_diod_no
+    4300028: diod_ok_diod_ok
+    4300030: diod_right_diod_right
+    4300032: diod_top_diod_top
+    4300034: diod_wait_diod_wait
+    4300036: display_display
+    4300038: led_case.001_led_case.001
+    4300040: led_case.002_led_case.002
+    4300042: led_case.003_led_case.003
+    4300044: led_case.004_led_case.004
+    4300046: led_case.005_led_case.005
+    4300048: led_case.006_led_case.006
+    4300050: led_case.007_led_case.007
+    4300052: led_case_led_case
+    4300054: mielofon_mielofon
+    4300056: socket_socket
+    4300058: tog_tog
+    4300060: toggle_toggle
+    4300062: "\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002_\u0426\u0438\u043B\u0438\u043D\u0434\u0440.002"
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
