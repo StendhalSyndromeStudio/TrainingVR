@@ -7,6 +7,46 @@ Direct3D:
     VRAM:     1074 MB
     Driver:   9.15.10.2900
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\I18N.dll (this message is harmless)
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\I18N.Other.dll (this message is harmless)
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\I18N.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\I18N.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\I18N.Other.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\I18N.Other.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\I18N.West.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\I18N.West.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\IDVM.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\IDVM.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Configuration.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Configuration.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Drawing.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Drawing.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Security.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Security.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Windows.Forms.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Windows.Forms.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityClientKSGT.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\UnityClientKSGT.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\TestPhotonCommon.dll (this message is harmless)
+Loading D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\TestPhotonCommon.dll into Unity Child Domain
+- Completed reload, in  0.910 seconds
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 40Hz; virtual: 1920x1080 at 0,0
+=======
 Platform assembly: D:\TrainingVR\UnityProject\Build\test_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading D:\TrainingVR\UnityProject\Build\test_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: D:\TrainingVR\UnityProject\Build\test_Data\Managed\I18N.dll (this message is harmless)
@@ -43,12 +83,18 @@ Loading D:\TrainingVR\UnityProject\Build\test_Data\Managed\TestPhotonCommon.dll 
 Platform assembly: D:\TrainingVR\UnityProject\Build\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\TrainingVR\UnityProject\Build\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+>>>>>>> origin/master
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
+<<<<<<< HEAD
+UnloadTime: 36.447670 ms
+Platform assembly: D:\Sources\Git\TrainingVR.git\UnityProject\Build\test_Data\Managed\System.Xml.dll (this message is harmless)
+=======
 UnloadTime: 1.991959 ms
 Platform assembly: D:\TrainingVR\UnityProject\Build\test_Data\Managed\System.Xml.dll (this message is harmless)
+>>>>>>> origin/master
 ***StartConnection***True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -58,12 +104,614 @@ ThreadPhotonServer 127.0.0.1 4530 Update: True
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 2 worker threads for Enlighten.
+<<<<<<< HEAD
+  Thread -> id: 1754 -> priority: 1 
+  Thread -> id: 9c0 -> priority: 1 
+=======
   Thread -> id: 2370 -> priority: 1 
   Thread -> id: 239c -> priority: 1 
+>>>>>>> origin/master
 Server to Protocol TCP Connect 
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+<<<<<<< HEAD
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+nameScript:NetworkInstantiate nameObject:ManagerPhotonNetworkView sendDirection:2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+=======
 NullReferenceException: Object reference not set to an instance of an object
   at PhotonNetwork.PhotonNetworkView.SET_Value (System.String id_photonBehaviour, System.String name_value, System.Object value) [0x00000] in <filename unknown>:0 
 UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
@@ -687,4 +1335,5 @@ PhotonServerTCP:HandlerUpdate(CodeHandler, Object)
 PhotonServerTCP:Update()
  
 (Filename:  Line: -1)
+>>>>>>> origin/master
 
