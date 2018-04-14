@@ -27,7 +27,7 @@ namespace voice_chat {
     ///
     /// \brief Обработчик аудио
     ///
-    virtual AudioIoHandler audioHandler() const = 0;
+    virtual AudioIoHandler *audioHandler() const = 0;
 
     ///
     /// \brief Текущий режим работы
