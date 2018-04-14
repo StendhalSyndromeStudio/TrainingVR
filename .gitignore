@@ -1,3 +1,9 @@
+# Unity - specific files
+/[Aa]ssetBundles/
+[Bb]uild/
+[Ll]ibrary/
+[Ll]inux/
+
 /*/[Ll]ibrary/
 /*/[Tt]emp/
 /*/[Oo]bj/
