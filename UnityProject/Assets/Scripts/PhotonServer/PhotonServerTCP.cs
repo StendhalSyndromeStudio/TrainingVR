@@ -358,8 +358,7 @@ public class PhotonServerTCP : MonoBehaviour, IPhotonPeerListener
     {
         try
         {
-            UnityEngine.Debug.LogFormat( "nameScript:{0} nameObject:{1} sendDirection:{2}", nameScript, nameObject, sendDirection );
-
+            
             threadPhoton.OpCustom(this, (byte)OperationCode.NetWorkUnity, new Dictionary<byte, object>
 
             {
