@@ -1,5 +1,5 @@
-#ifndef AUDIO_IO_HANDLER_H
-#define AUDIO_IO_HANDLER_H
+#ifndef ABSTRACT_AUDIO_IO_HANDLER_H
+#define ABSTRACT_AUDIO_IO_HANDLER_H
 
 #include <QObject>
 
@@ -58,6 +58,16 @@ namespace voice_chat {
     /// \param errorString текст ошибки
     ///
     void audioOutputError(Error error, const QString &errorString);
+
+    ///
+    /// \brief Обновлено состояние воспроизведения
+    ///
+    void plauingUpdateState(bool playing);
+    ///
+    /// \brief Обновлено состояние текущей записи
+    /// \todo Изменить описание а то не корректно звучит
+    ///
+    void recordingUpdateState(bool recording);
   public slots:
     ///
     /// \brief Метод инициализации класса
@@ -91,4 +101,4 @@ namespace voice_chat {
 
 }
 
-#endif // AUDIO_IO_HANDLER_H
+#endif // ABSTRACT_AUDIO_IO_HANDLER_H
