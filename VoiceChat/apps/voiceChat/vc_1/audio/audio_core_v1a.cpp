@@ -2,7 +2,8 @@
 using namespace vc_1;
 
 
-AudioCore_v1a::AudioCore_v1a(QObject *parent) : QObject(parent)
+AudioCore_v1a::AudioCore_v1a(QObject *parent)
+  : voice_chat::AudioCore(parent)
 {
 
 }
@@ -13,12 +14,12 @@ AudioCore_v1a::~AudioCore_v1a()
 }
 
 
-voice_chat::AudioIoHandler vc_1::AudioCore_v1a::audioHandler() const
+voice_chat::AudioIoHandler *vc_1::AudioCore_v1a::audioHandler() const
 {
   throw ( "Not implemented" ); //TODO
 }
 
-voice_chat::Mode vc_1::AudioCore_v1a::mode() const
+voice_chat::AudioCore::Mode vc_1::AudioCore_v1a::mode() const
 {
   throw ( "Not implemented" ); //TODO
 }

@@ -12,7 +12,8 @@ SOURCES += \
     voice_chat/audio_core.cpp \
     voice_chat/audio_io_handler.cpp \
     voice_chat/audio_io_stream.cpp \
-    voice_chat/audio_stream_merger.cpp
+    voice_chat/audio_stream_merger.cpp \
+    voice_chat/audio_stream_splitter.cpp
 
 HEADERS += \
         voicechatinterfaces.h \
@@ -20,4 +21,5 @@ HEADERS += \
     voice_chat/audio_io_handler.h \
     voice_chat/audio_io_stream.h \
     voice_chat/audio_stream_merger.h \
-    voice_chat/audio_types.h
+    voice_chat/audio_types.h \
+    voice_chat/audio_stream_splitter.h

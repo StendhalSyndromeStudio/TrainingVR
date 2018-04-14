@@ -37,7 +37,11 @@ namespace voice_chat {
     virtual quint64 read(char *data, quint64 length) const = 0;
 
     template<typename AudioType>
-    quint64 read(AudioType *data, quint64 length);
+    static quint64 read(AudioIoStream *stream, AudioType *data, quint64 length)
+    {
+      quint64 readLength = length * static_cast<quint64>( sizeof(AudioType) );
+      return stream->read(reinterpret_cast<char *>(data), readLength );
+    }
   public slots:
     ///
     /// \brief Записать данные
@@ -53,9 +57,6 @@ namespace voice_chat {
     ///
     virtual quint64 write(const char *data, quint64 length) = 0;
 
-    template<typename AudioType>
-    quint64 write(AudioType *data, quint64 length);
-
     ///
     /// \brief take
     /// \param length
@@ -69,31 +70,23 @@ namespace voice_chat {
     ///
     virtual quint64 take(char *data, quint64 length) = 0;
 
+    virtual void clear();
+  public:
     template<typename AudioType>
-    quint64 take(AudioType *data, quint64 length);
+    static quint64 write(AudioIoStream *stream, AudioType *data, quint64 length)
+    {
+      quint64 readLength = length * static_cast<quint64>( sizeof(AudioType) );
+      return stream->write(reinterpret_cast<char *>(data), readLength );
+    }
+
+    template<typename AudioType>
+    static quint64 take(AudioIoStream *stream, AudioType *data, quint64 length)
+    {
+      quint64 readLength = length * static_cast<quint64>( sizeof(AudioType) );
+      return stream->take(reinterpret_cast<char *>(data), readLength );
+    }
 
   };
-
-  template<typename AudioType>
-  quint64 AudioIoStream::read(voice_chat::AudioIoStream::AudioType *data, quint64 length)
-  {
-    quint64 readLength = length * static_cast<quint64>sizeof(AudioType);
-    return read(reinterpret_cast<char *>(data), readLength );
-  }
-
-  template<typename AudioType>
-  quint64 AudioIoStream::write(voice_chat::AudioIoStream::AudioType *data, quint64 length)
-  {
-    quint64 readLength = length * static_cast<quint64>sizeof(AudioType);
-    return write(reinterpret_cast<char *>(data), readLength );
-  }
-
-  template<typename AudioType>
-  quint64 AudioIoStream::take(voice_chat::AudioIoStream::AudioType *data, quint64 length)
-  {
-    quint64 readLength = length * static_cast<quint64>sizeof(AudioType);
-    return take(reinterpret_cast<char *>(data), readLength );
-  }
 
 }
 
