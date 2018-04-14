@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <app>
-  <server host="192.168.0.1" port="4530" type="server"></server>
+  <server host="127.0.0.1" port="4530" type="client"></server>
 </app>
