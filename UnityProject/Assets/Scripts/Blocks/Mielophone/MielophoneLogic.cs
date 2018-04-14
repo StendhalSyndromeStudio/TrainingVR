@@ -31,7 +31,7 @@ public class MielophoneLogic : PhotonBehaviour {
     IEnumerator toLeft( ) {
         while ( rotate ) {
             if ( antennAzimut != null )
-                antennAzimut.Rotate( new Vector3( 0, 1, 0 ) );
+                antennAzimut.Rotate( new Vector3( 0, 0, 1 ) );
             makeData( _azimut--, _anglePlace );
             yield return new WaitForSeconds( 0.05f );
         }
@@ -41,7 +41,7 @@ public class MielophoneLogic : PhotonBehaviour {
     IEnumerator toRight( ) {
         while ( rotate ) {
             if ( antennAzimut != null )
-                antennAzimut.Rotate( new Vector3( 0, -1, 0 ) );
+                antennAzimut.Rotate( new Vector3( 0, 0, -1 ) );
             makeData( _azimut++, _anglePlace );
             yield return new WaitForSeconds( 0.05f );
         }

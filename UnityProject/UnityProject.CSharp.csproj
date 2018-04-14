@@ -16,11 +16,7 @@
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
-<<<<<<< HEAD
     <UnityVersion>5.6.5f1</UnityVersion>
-=======
-    <UnityVersion>5.6.0p4</UnityVersion>
->>>>>>> origin/master
     <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
