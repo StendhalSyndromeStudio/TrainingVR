@@ -45,7 +45,7 @@ public class MainTrenag : MonoBehaviour {
     void Awake( ) {
         MainTrenag.instance = this;
 
-        string path = System.IO.Path.Combine( Application.streamingAssetsPath, this.PathSetting );
+        string path = this.PathSetting;
         ApplicationConfig _config = null;
         if ( XmlDeserialization.TryPathToObject<ApplicationConfig>( path , out _config ) ) {
             this.Config = _config;

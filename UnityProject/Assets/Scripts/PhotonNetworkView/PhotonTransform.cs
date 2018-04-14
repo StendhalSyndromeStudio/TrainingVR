@@ -46,6 +46,13 @@ namespace PhotonNetwork
 
         #endregion
 
+        [PhotonNetwork.Photon]
+        [PhotonNetwork.PhotonTime( 30f )]
+        public Vector3 scale {
+            get { return this.transformPosition.localScale; }
+            set { this.transformPosition.localScale = value; }
+        }
+
 
         float lerpDelta;
 
