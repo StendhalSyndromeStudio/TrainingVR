@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scenario>
+  <item text="Сценарий №1" resource="Scenarios/Scenario_1/description.xml"/>
+  <item text="Сценарий №2" resource="Scenarios/Scenario_2/description.xml"/>
+  <item text="Сценарий №3" resource="Scenarios/Scenario_3/description.xml"/>
+</scenario>
