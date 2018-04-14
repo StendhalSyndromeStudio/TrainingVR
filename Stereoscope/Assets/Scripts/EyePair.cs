@@ -99,17 +99,29 @@ public class EyePair : MonoBehaviour {
 
             if ( target != null )
             {
-                Debug.Log( target.name );
+                //Debug.Log( target.name );
             }
             if ( Input.GetMouseButtonUp( 0 ) ) {
                 Debug.Log( "MouseUp" );
                 if ( target != null )
                 {
-                    var button = target.GetComponent<Button>( );
+                    Debug.Log( target.name );
+                    var button = target.GetComponents<UnityEngine.EventSystems.IPointerClickHandler>( );
                     if ( button != null )
                     {
-                        UnityEngine.EventSystems.PointerEventData data = new UnityEngine.EventSystems.PointerEventData(UnityEngine.EventSystems.EventSystem.current);
-                        button.OnPointerClick( data );
+                        Debug.Log( "button != null" );
+                        
+                        foreach(var item in button )
+                        {
+                            var data = new UnityEngine.EventSystems.PointerEventData(UnityEngine.EventSystems.EventSystem.current);
+                            data.button = UnityEngine.EventSystems.PointerEventData.InputButton.Left;
+                            var pos = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
+                            data.position = pos;
+                            data.pressPosition = pos;
+                            item.OnPointerClick( data );
+                            
+                        }
+                        
                         //button.onClick.Invoke( );
                     }
                 }

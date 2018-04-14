@@ -17,8 +17,8 @@ public class VRCursor : MonoBehaviour {
                 {
                     if ( hitPoint.distance > 0 )
                     {
-                        Debug.Log( "_distance = " + _distance );
-                        Debug.Log( "hitPoint.distance = " + hitPoint.distance );
+                        //Debug.Log( "_distance = " + _distance );
+                        //Debug.Log( "hitPoint.distance = " + hitPoint.distance );
                         /*double diff = _distance - hitPoint.distance;
            
                         Debug.Log( "diff = " + diff );
