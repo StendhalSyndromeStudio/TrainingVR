@@ -1,8 +1,0 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/MainZvyagintsev.unity
-=======
-- path: Assets/Scenes/Main.unity
->>>>>>> a681dd1db27ac26f8c801350869feca634b426ed
-  isLoaded: 1
-  isActive: 1
