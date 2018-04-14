@@ -38,9 +38,18 @@ public class ApplicationConfig {
         public TypeCode Type = TypeCode.client;
     }
 
+    [XmlType("scenario")]
+    public class ScenarioClass {
+        [XmlAttribute("path")]
+        public string Path = string.Empty;
+    }
+
     /// <summary>
     /// ПОЛЕ: Описание сервера
     /// </summary>
     [XmlElement("server", typeof(ServerClass))]
     public ServerClass Server = new ServerClass( );
+
+    [XmlElement( "scenario", typeof(ScenarioClass) )]
+    public ScenarioClass Scenario = new ScenarioClass( );
 }

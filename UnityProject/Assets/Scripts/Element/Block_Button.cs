@@ -118,15 +118,18 @@ namespace Element {
         /// <param name="Sender"></param>
         /// <param name="Value"></param>
         private void StatusButton_Change( object Sender, object Value ) {
-            transformButton.localPosition = startPosition + ( ( isDown ) ? offsetDown : Vector3.zero );
+            bool isDown = ( bool ) Value;
+            try {
+                transformButton.localPosition = startPosition + ( ( isDown ) ? offsetDown : Vector3.zero );
 
-            if ( offsetAngle != Vector3.zero ) {
-                transformButton.localRotation = startRotation * ( ( isDown ) ? Quaternion.Euler( offsetAngle ) : Quaternion.identity );
-            }
+                if ( offsetAngle != Vector3.zero ) {
+                    transformButton.localRotation = startRotation * ( ( isDown ) ? Quaternion.Euler( offsetAngle ) : Quaternion.identity );
+                }
 
-            if ( !isDown ) {
-                isPressed = false;
-            }
+                if ( !isDown ) {
+                    isPressed = false;
+                }
+            }catch(Exception ex) { UnityEngine.Debug.Log( ex ); }
         }
 
     }

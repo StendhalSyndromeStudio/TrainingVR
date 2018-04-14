@@ -112,6 +112,13 @@
     <Compile Include="Assets\Scripts\Element\Block_Diod.cs" />
     <Compile Include="Assets\Scripts\Element\Block_Switch.cs" />
     <Compile Include="Assets\Scripts\MainTrenag.cs" />
+    <Compile Include="Assets\Scripts\Menus\CollectionDescription.cs" />
+    <Compile Include="Assets\Scripts\Menus\IMenusCollection.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\LecturerMenus.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuScenario\ButtonItem.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuScenario\MainScenario.cs" />
+    <Compile Include="Assets\Scripts\Menus\ManagerMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\MenuDescription.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\CodeCommands.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\ExPhotonBehaviour.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\IPhotonComponent.cs" />
@@ -136,6 +143,8 @@
     <Compile Include="Assets\Scripts\PhotonServer\PhotonServerTCP.cs" />
     <Compile Include="Assets\Scripts\PhotonServer\ThreadPhotonServer.cs" />
     <Compile Include="Assets\Scripts\Settings\ApplicationConfig.cs" />
+    <Compile Include="Assets\Scripts\Settings\Scenario\XmlItem.cs" />
+    <Compile Include="Assets\Scripts\Settings\Scenario\XmlScenario.cs" />
     <Compile Include="Assets\Scripts\TestRotation.cs" />
     <Compile Include="Assets\Scripts\XmlDeserialization.cs" />
   </ItemGroup>
@@ -143,6 +152,8 @@
     <None Include="Assets\Plugins\PhotonServer\Photon3Unity3D.xml" />
     <None Include="Assets\Plugins\PhotonServer\UnityEngine.xml" />
     <None Include="Assets\StreamingAssets\Application\config.xml" />
+    <None Include="Assets\StreamingAssets\Application\scenario.xml" />
+    <None Include="Assets\StreamingAssets\Scenarios\Scenario_1\description.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
