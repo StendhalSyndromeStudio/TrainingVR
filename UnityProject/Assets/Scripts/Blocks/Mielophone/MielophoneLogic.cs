@@ -31,7 +31,7 @@ public class MielophoneLogic : PhotonBehaviour {
     IEnumerator toLeft( ) {
         while ( rotate ) {
             if ( antennAzimut != null )
-                antennAzimut.Rotate( new Vector3( 0, 0, 1 ) );
+                antennAzimut.Rotate( new Vector3( 0, 1, 0 ) );
             makeData( _azimut--, _anglePlace );
             yield return new WaitForSeconds( 0.05f );
         }
@@ -41,7 +41,7 @@ public class MielophoneLogic : PhotonBehaviour {
     IEnumerator toRight( ) {
         while ( rotate ) {
             if ( antennAzimut != null )
-                antennAzimut.Rotate( new Vector3( 0, 0, -1 ) );
+                antennAzimut.Rotate( new Vector3( 0, -1, 0 ) );
             makeData( _azimut++, _anglePlace );
             yield return new WaitForSeconds( 0.05f );
         }
@@ -212,6 +212,13 @@ public class MielophoneLogic : PhotonBehaviour {
             this._status.Value = string.Empty;
             diods [ ( int ) Diods.DiodOk ].onChangeStatus( 0 );
             diods [ ( int ) Diods.DiodNo ].onChangeStatus( 0 );
+
+            diods [ ( int ) Diods.DiodCrash ].onChangeStatus( 0 );
+            diods [ ( int ) Diods.DiodDown ].onChangeStatus( 0 );
+            diods [ ( int ) Diods.DiodLeft ].onChangeStatus( 0 );
+            diods [ ( int ) Diods.DiodRight ].onChangeStatus( 0 );
+            diods [ ( int ) Diods.DiodTop ].onChangeStatus( 0 );
+            diods [ ( int ) Diods.DiodWait ].onChangeStatus( 0 );
         }
     }
 
