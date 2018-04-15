@@ -3,6 +3,9 @@
 
 #include <QObject>
 
+#include "audio_stream_merger.h"
+#include "audio_stream_splitter.h"
+
 namespace voice_chat {
 
   ///
@@ -21,6 +24,9 @@ namespace voice_chat {
       UnknowError
     };
     Q_ENUM(Error)
+
+    using Merger    = std::shared_ptr<AudioStreamMerger>;
+    using Splitter  = std::shared_ptr<AudioStreamSplitter>;
   protected:
     explicit AudioIoHandler(QObject *parent = nullptr);
   public:
@@ -44,6 +50,10 @@ namespace voice_chat {
     /// \brief Текущий уровень воспроизведения
     ///
     virtual double playLevel() const = 0;
+
+    virtual Merger output() const = 0;
+
+    virtual Splitter input() const = 0;
 
   signals:
     ///
