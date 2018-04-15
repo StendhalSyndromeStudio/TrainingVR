@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public class AutoFigureController : PhotonBehaviour {
+public class AutoFigureController : MonoBehaviour {
     /// <summary>
     /// ПЕРЕЧИСЛЕНИЕ: Тип фигуры
     /// </summary>

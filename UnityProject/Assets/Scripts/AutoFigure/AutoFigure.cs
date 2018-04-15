@@ -6,11 +6,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class AutoFigure : PhotonBehaviour, IAutoFigure, IPointerEnterHandler, IPointerExitHandler {
+public class AutoFigure : MonoBehaviour, IAutoFigure, IPointerEnterHandler, IPointerExitHandler {
     private Canvas _canvas;
     private Text _text;
     void Awake( ) {
-        this.transform.SetParent( AutoFigureController.Canvas, false );
+        this.transform.SetParent( AutoFigureController.Canvas);
 
         _canvas = this.GetComponentInParent<Canvas>( );
         _text = this.GetComponentInChildren<Text>( );
@@ -44,7 +44,7 @@ public class AutoFigure : PhotonBehaviour, IAutoFigure, IPointerEnterHandler, IP
         }
 
         if ( Input.GetMouseButton( 2 ) ) {
-            Destroy( this.gameObject );
+            PhotonNetwork.PhotonNetworkView.Destroy( this.gameObject );
         }
 
         if ( Input.GetAxis( "Mouse ScrollWheel" ) < 0 ) {
