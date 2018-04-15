@@ -139,6 +139,8 @@
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\Top\MenuTop.cs" />
     <Compile Include="Assets\Scripts\Menus\ManagerMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\MenuDescription.cs" />
+    <Compile Include="Assets\Scripts\Menus\Training\MenuTraining\MainTraining.cs" />
+    <Compile Include="Assets\Scripts\Menus\Training\TrainingMenus.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\CodeCommands.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\ExPhotonBehaviour.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\IPhotonComponent.cs" />
