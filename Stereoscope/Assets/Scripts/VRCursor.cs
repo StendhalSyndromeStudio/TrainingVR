@@ -33,7 +33,7 @@ public class VRCursor : MonoBehaviour {
                     }
                     else
                     {
-                        _distance = 1;
+                        //_distance = 10;
                         //var scalediffVec = new Vector3(scaleDiff,scaleDiff,scaleDiff);
 
                         transform.localScale = _scale * _distance;
@@ -45,7 +45,7 @@ public class VRCursor : MonoBehaviour {
                 }
                 else
                 {
-                    _distance = 1;
+                    //_distance = 10;
                     //var scalediffVec = new Vector3(scaleDiff,scaleDiff,scaleDiff);
 
                     transform.localScale = _scale * _distance;
@@ -63,7 +63,7 @@ public class VRCursor : MonoBehaviour {
                 }*/
             }
             else {
-                _distance = 3;
+                //_distance = 10;
                 //var scalediffVec = new Vector3(scaleDiff,scaleDiff,scaleDiff);
 
                 transform.localScale = _scale * _distance;
