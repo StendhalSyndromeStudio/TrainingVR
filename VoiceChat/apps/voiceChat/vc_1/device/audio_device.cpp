@@ -39,9 +39,15 @@ bool AudioDevice::play(const std::shared_ptr<voice_chat::AudioIoStream> &stream)
   _outputUtils = new AudioDeviceUtils( AudioDeviceUtils::Mode::Output, stream );
   _outputUtils->start();
 
-  emit plauingUpdateState( true );
+  do
+  {
+    std::this_thread::sleep_for( std::chrono::milliseconds( 20 ) );
+  } while ( _outputUtils->status() == AudioDeviceUtils::Status::Starting );
 
-  return true;
+  bool ok = _outputUtils->status() == AudioDeviceUtils::Status::Running;
+  emit plauingUpdateState( ok );
+
+  return ok;
 }
 
 bool AudioDevice::record(const std::shared_ptr<voice_chat::AudioIoStream> &stream)
@@ -49,12 +55,18 @@ bool AudioDevice::record(const std::shared_ptr<voice_chat::AudioIoStream> &strea
   stopRecording();
 
   _inputStream = stream;
-  _outputUtils = new AudioDeviceUtils( AudioDeviceUtils::Mode::Input, stream );
-  _outputUtils->start();
+  _inputUtils = new AudioDeviceUtils( AudioDeviceUtils::Mode::Input, stream );
+  _inputUtils->start();
 
-  emit recordingUpdateState( true );
+  do
+  {
+    std::this_thread::sleep_for( std::chrono::milliseconds( 20 ) );
+  } while ( _inputUtils->status() == AudioDeviceUtils::Status::Starting );
 
-  return true;
+  bool ok = _inputUtils->status() == AudioDeviceUtils::Status::Running;
+  emit recordingUpdateState( ok );
+
+  return ok;
 }
 
 void AudioDevice::stopPlaying()
