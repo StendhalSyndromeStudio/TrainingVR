@@ -201,6 +201,7 @@
     <None Include="Assets\StreamingAssets\Application\scenario.xml" />
     <None Include="Assets\StreamingAssets\Scenarios\Scenario_1\description.xml" />
     <None Include="Assets\StreamingAssets\Scenarios\Scenario_2\description.xml" />
+    <None Include="Assets\StreamingAssets\Scenarios\Scenario_3\description.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

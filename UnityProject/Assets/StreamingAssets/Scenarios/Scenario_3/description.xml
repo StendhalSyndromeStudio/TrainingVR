@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<description>
+  <prefab resource="Prefabs/HublBleat"/>
+  <item id="1" text="Внешний вид" >
+    <info>
+      Здесь текст
+    </info>
+  </item>
+</description>

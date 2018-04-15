@@ -53,7 +53,7 @@ public class AutoFigureController : MonoBehaviour {
             autoFigure.transform.localPosition = new Vector3( 0, 0, 0 );
             var interfaceFigure = autoFigure.GetComponent<IAutoFigure>( );
             if ( interfaceFigure != null ) {
-                interfaceFigure.text = caption;
+               // interfaceFigure.text = caption;
             }
         }catch(Exception ex ) {
             UnityEngine.Debug.LogException( ex );

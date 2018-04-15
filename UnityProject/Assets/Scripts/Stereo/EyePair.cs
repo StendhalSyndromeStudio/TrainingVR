@@ -109,11 +109,11 @@ public class EyePair : MonoBehaviour {
             }
             if ( _Left != null )
             {
-                if ( !_Left.enabled ) _Left.gameObject.SetActive( true);
+                if ( !_Left.Apple.enabled ) _Left.Apple.enabled = true;
             }
             if ( _Right != null )
             {
-                if ( !_Right.enabled ) _Right.gameObject.SetActive( true);
+                if ( !_Right.Apple.enabled ) _Right.Apple.enabled = true;
             }
             if ( _Cursor != null )
             {
@@ -122,21 +122,21 @@ public class EyePair : MonoBehaviour {
         }
         else
         {
+            if ( _SelfCamera != null )
+            {
+                if ( !_SelfCamera.enabled ) _SelfCamera.enabled = true;
+            }
             if ( _Left != null )
             {
-                if ( _Left.enabled ) _Left.gameObject.SetActive( false );
+                if ( _Left.Apple.enabled ) _Left.Apple.enabled = false;
             }
             if ( _Right != null )
             {
-                if ( _Right.enabled ) _Right.gameObject.SetActive( false );
+                if ( _Right.Apple.enabled ) _Right.Apple.enabled = false;
             }
             if ( _Cursor != null )
             {
                 if ( _Cursor.gameObject.activeSelf) _Cursor.gameObject.SetActive( false );
-            }
-            if ( _SelfCamera != null ) {
-                if ( !_SelfCamera.enabled )
-                    _SelfCamera.enabled = true;
             }
         }
         if ( _Cursor == null ) {
@@ -214,6 +214,7 @@ public class EyePair : MonoBehaviour {
             }
             
             if ( Input.GetMouseButtonUp( 0 ) ) {
+                Debug.Log( "MouseUp" );
                 if ( target != null )
                 {
                     Debug.Log( target.name );

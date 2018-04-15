@@ -64,6 +64,10 @@ namespace Assets.Scripts.Menus.Lecturer.MenuTraining {
                         AutoFigureController.Create( AutoFigureController.FigureType.circle, String.Empty );
                     }
                     break;
+                case MenuTopCode.remote: {
+                        AutoFigureController.Create( AutoFigureController.FigureType.textaArea, String.Empty );
+                    }
+                    break;
             }
         }
 

@@ -36,6 +36,15 @@ public class MainTrenag : MonoBehaviour {
 
     [Header( "EyePair:" )]
     public EyePair EyePair;
+
+    [Header( "Tracking:" )]
+    public CVEM.Tracking.TrackingSocketClient Tracking;
+
+    [Header( "PhotonTransform:" )]
+    public PhotonNetwork.PhotonTransform PhotonTransform;
+
+    [Header( "FreeCamera:" )]
+    public FreeCamera FreeCamera;
     #endregion
 
     #region --[PRIVATE]--
@@ -78,16 +87,13 @@ public class MainTrenag : MonoBehaviour {
     /// </summary>
     private void StatusConnect_Change( object sender, object value ) {
         if (PhotonServerTCP.Instance.StatusConnect.Value != ExitGames.Client.Photon.StatusCode.Connect ) { return; }
-   
-        switch ( this.Config.Visual.Mode ) {
-            case ModeVisual.normal: {
-                    this.EyePair.Vr = false;
-                } break;
-            case ModeVisual.vr: {
-                    this.EyePair.Vr = true;
-                }
-                break;
-        }
+
+        bool isActive = ( ( this.Config.Visual.Mode == ModeVisual.vr ) && ( Config.Server.Type != ApplicationConfig.ServerClass.TypeCode.server ) );
+
+        this.EyePair.Vr = isActive;
+        this.Tracking.enabled = isActive;
+        this.PhotonTransform.enabled = Config.Server.Type == ApplicationConfig.ServerClass.TypeCode.server;
+        this.FreeCamera.enabled = Config.Server.Type == ApplicationConfig.ServerClass.TypeCode.server;
     }
 }
 

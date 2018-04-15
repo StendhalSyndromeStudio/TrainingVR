@@ -9,8 +9,11 @@ using UnityEngine.EventSystems;
 public class AutoFigure : MonoBehaviour, IAutoFigure, IPointerEnterHandler, IPointerExitHandler {
     private Canvas _canvas;
     private Text _text;
+
+    public bool IsNot = false;
+
     void Awake( ) {
-        this.transform.SetParent( AutoFigureController.Canvas);
+        if ( !this.IsNot ) { this.transform.SetParent( AutoFigureController.Canvas ); }
 
         _canvas = this.GetComponentInParent<Canvas>( );
         _text = this.GetComponentInChildren<Text>( );
@@ -32,6 +35,8 @@ public class AutoFigure : MonoBehaviour, IAutoFigure, IPointerEnterHandler, IPoi
 
 	// Update is called once per frame
 	void Update ( ) {
+        if ( this.IsNot ) { return; }
+        if ( MainTrenag.Instance.Config.Server.Type != ApplicationConfig.ServerClass.TypeCode.server ) { return; }
         if ( !_selected )
             return;
         if ( Input.GetMouseButton( 0 ) ) {
