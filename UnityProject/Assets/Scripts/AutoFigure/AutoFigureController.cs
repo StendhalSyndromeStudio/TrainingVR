@@ -13,6 +13,7 @@ public class AutoFigureController : MonoBehaviour {
     public enum FigureType {
         arrow,
         circle,
+        textaArea
     }
 
     [System.Serializable]
