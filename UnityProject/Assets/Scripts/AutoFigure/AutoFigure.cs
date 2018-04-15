@@ -10,7 +10,7 @@ public class AutoFigure : PhotonBehaviour, IAutoFigure, IPointerEnterHandler, IP
     private Canvas _canvas;
     private Text _text;
     void Awake( ) {
-        this.transform.SetParent( AutoFigureController.Canvas );
+        this.transform.SetParent( AutoFigureController.Canvas, false );
 
         _canvas = this.GetComponentInParent<Canvas>( );
         _text = this.GetComponentInChildren<Text>( );
