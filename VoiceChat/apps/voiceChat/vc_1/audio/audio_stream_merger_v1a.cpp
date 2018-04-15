@@ -110,9 +110,10 @@ void AudioStreamMergerUtils::run()
 //--------------- Base class ------------------------------
 
 AudioStreamMerger_v1a::AudioStreamMerger_v1a()
+  : _utils ( new AudioStreamMergerUtils( this ) )
 {
 
-  _utils  = new AudioStreamMergerUtils( this );
+  _utils->start();
 }
 
 AudioStreamMerger_v1a::~AudioStreamMerger_v1a()
