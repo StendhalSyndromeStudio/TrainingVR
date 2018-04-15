@@ -109,11 +109,11 @@ public class EyePair : MonoBehaviour {
             }
             if ( _Left != null )
             {
-                if ( !_Left.enabled ) _Left.enabled = true;
+                if ( !_Left.Apple.enabled ) _Left.Apple.enabled = true;
             }
             if ( _Right != null )
             {
-                if ( !_Right.enabled ) _Right.enabled = true;
+                if ( !_Right.Apple.enabled ) _Right.Apple.enabled = true;
             }
             if ( _Cursor != null )
             {
@@ -128,11 +128,11 @@ public class EyePair : MonoBehaviour {
             }
             if ( _Left != null )
             {
-                if ( _Left.enabled ) _Left.enabled = false;
+                if ( _Left.Apple.enabled ) _Left.Apple.enabled = false;
             }
             if ( _Right != null )
             {
-                if ( _Right.enabled ) _Right.enabled = false;
+                if ( _Right.Apple.enabled ) _Right.Apple.enabled = false;
             }
             if ( _Cursor != null )
             {
