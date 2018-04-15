@@ -13,12 +13,19 @@ public class EyePair : MonoBehaviour {
     [SerializeField]
     private VRCursor _Cursor;
 
+    [SerializeField]
+    private bool _Vr = true;
+
     public StereoscopeEye Left { get { return _Left; } }
     public StereoscopeEye Right { get { return _Right; } }
 
     public VRCursor Cursor { get { return _Cursor; } }
 
+    public bool Vr { get { return _Vr; } set { _Vr = value; } }
+
     private GameObject prevTarget;
+
+    private Camera _SelfCamera;
 
     private bool InitLeftEye ( ) {
         if ( _Left != null )
@@ -83,6 +90,7 @@ public class EyePair : MonoBehaviour {
     // Use this for initialization
     void Start () {
         prevTarget = null;
+        _SelfCamera = GetComponent<Camera>( );
         if ( !InitEyes( ) ) {
             Debug.LogError( "Can't init eyes! Make sure you are set left and right eyes" );
         }
@@ -94,6 +102,43 @@ public class EyePair : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if ( _Vr )
+        {
+            if ( _SelfCamera != null ) {
+                if ( _SelfCamera.enabled ) _SelfCamera.enabled = false;
+            }
+            if ( _Left != null )
+            {
+                if ( !_Left.Apple.enabled ) _Left.Apple.enabled = true;
+            }
+            if ( _Right != null )
+            {
+                if ( !_Right.Apple.enabled ) _Right.Apple.enabled = true;
+            }
+            if ( _Cursor != null )
+            {
+                if ( !_Cursor.gameObject.activeSelf ) _Cursor.gameObject.SetActive( true );
+            }
+        }
+        else
+        {
+            if ( _SelfCamera != null )
+            {
+                if ( !_SelfCamera.enabled ) _SelfCamera.enabled = true;
+            }
+            if ( _Left != null )
+            {
+                if ( _Left.Apple.enabled ) _Left.Apple.enabled = false;
+            }
+            if ( _Right != null )
+            {
+                if ( _Right.Apple.enabled ) _Right.Apple.enabled = false;
+            }
+            if ( _Cursor != null )
+            {
+                if ( _Cursor.gameObject.activeSelf) _Cursor.gameObject.SetActive( false );
+            }
+        }
         if ( _Cursor == null ) {
             Debug.Log( "Cursor is null!" );
             if ( prevTarget != null ) {
