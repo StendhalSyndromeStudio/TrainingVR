@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.5f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -123,6 +125,12 @@
     <Compile Include="Assets\Scripts\Element\Block_Button.cs" />
     <Compile Include="Assets\Scripts\Element\Block_Diod.cs" />
     <Compile Include="Assets\Scripts\Element\Block_Switch.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\AsynchronousClientExample.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\IExternalDevices.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\IReadDataFromSocketClass.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\MainSocketClient.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\SocketClient.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\TrackingSocketClient.cs" />
     <Compile Include="Assets\Scripts\MainTrenag.cs" />
     <Compile Include="Assets\Scripts\Menus\CollectionDescription.cs" />
     <Compile Include="Assets\Scripts\Menus\IMenusCollection.cs" />
@@ -184,6 +192,9 @@
     <None Include="Assets\StreamingAssets\Application\scenario.xml" />
     <None Include="Assets\StreamingAssets\Scenarios\Scenario_1\description.xml" />
     <None Include="Assets\StreamingAssets\Scenarios\Scenario_2\description.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\StreamingAssets\Application\ExternalDevices.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
