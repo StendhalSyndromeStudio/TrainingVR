@@ -34,3 +34,6 @@ HEADERS += \
 FORMS +=
 
 include(libs.pri)
+
+RESOURCES += \
+    res/res.qrc

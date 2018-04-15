@@ -1,12 +1,23 @@
 #include "voice_chat.h"
 using namespace vc_1;
 
+#include <QIcon>
+#include <QMenu>
 #include <QDebug>
 
 VoiceChat::VoiceChat(QObject *parent)
   : IVoiceChat(parent)
 {
 
+  _tray.setIcon( QIcon( ":/icon/tray.png" ) );
+
+  _tray.setContextMenu( new QMenu() );
+  auto *a = _tray.contextMenu()->addAction( "Выход" );
+
+  connect( a,     &QAction::triggered,
+           this,  &VoiceChat::closeApplication );
+
+  _tray.show();
 }
 
 VoiceChat::~VoiceChat()
@@ -25,7 +36,7 @@ bool VoiceChat::initilize()
   device->play( stream );
   device->record( stream );
 
-
+  _tray.showMessage( "Информация", "Модуль голосовой связи запущен" );
   return true;
 }
 
