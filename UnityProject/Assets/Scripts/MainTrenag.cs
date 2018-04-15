@@ -66,6 +66,23 @@ public class MainTrenag : MonoBehaviour {
 
     public void Start( ) {
         PhotonServerTCP.Instance.StartConnection( this.Config.Server.Host, this.Config.Server.Port, this.Config.Server.Type == ApplicationConfig.ServerClass.TypeCode.server );
+        PhotonServerTCP.Instance.StatusConnect.AddingEvent( this, this.StatusConnect_Change );
+        this.StatusConnect_Change( null, null );
+    }
+
+    /// <summary>
+    /// МЕТОД: Изменение состояния подключения к серверу
+    /// </summary>
+    private void StatusConnect_Change( object sender, object value ) {
+        if (PhotonServerTCP.Instance.StatusConnect.Value != ExitGames.Client.Photon.StatusCode.Connect ) { return; }
+        switch ( this.Config.Visual.Mode ) {
+            case ModeVisual.normal: {
+
+                }break;
+            case ModeVisual.vr: {
+
+                }break;
+        }
     }
 }
 
