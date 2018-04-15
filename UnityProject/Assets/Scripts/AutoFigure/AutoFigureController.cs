@@ -4,11 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Linq;
 
 public class AutoFigureController : PhotonBehaviour {
+    /// <summary>
+    /// ПЕРЕЧИСЛЕНИЕ: Тип фигуры
+    /// </summary>
+    public enum FigureType {
+        arrow,
+        circle,
+    }
+
     [System.Serializable]
     public struct AutoFigureElement {
-        public string Name;
+        public FigureType Type;
         public string Resource;
     }
     
@@ -29,33 +38,24 @@ public class AutoFigureController : PhotonBehaviour {
         AutoFigureController.instance = this;
     }
 
-    void Start( ) {
-        this.isOwner.AddingEvent( this, this.Owner_Change );
-        this.Owner_Change( null, null );
-    }
+    /// <summary>
+    /// МЕТОД: Создание объекта автофигуры
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="caption"></param>
+    public static void Create(FigureType type, string caption ) {
+        try {
+            string resource = instance._autoFigurePrefab.FirstOrDefault( ( element ) => { return element.Type == type; } ).Resource;
+            if ( String.IsNullOrEmpty( resource ) ) { return; }
 
-    private void Owner_Change( object Sender, object Value ) {
-        switch ( this.isOwner.Value ) {
-            case CodeOwner.@true: {
-                    OnInstanceAutoFigure( "arrow", "1" );
-                    OnInstanceAutoFigure( "arrow", "2" );
-                }
-                break;
-        }
-    }
-
-    void OnInstanceAutoFigure( string name, string text = "" ) {
-        foreach ( var element in _autoFigurePrefab ) {
-            if ( name == element.Name ) {
-                var autoFigure = PhotonNetwork.PhotonNetworkView.Instantiate( element.Resource, new Vector3( 0, 0, 0 ), new Quaternion( ) );
-                autoFigure.transform.localPosition = new Vector3( 0, 0, 0 );
-                var interfaceFigure = autoFigure.GetComponent<IAutoFigure>( );
-                if ( interfaceFigure != null )
-                    interfaceFigure.text = text;
-                else
-                    Debug.LogError( "empty auto figure interface" );
-                return;
+            var autoFigure = PhotonNetwork.PhotonNetworkView.Instantiate( resource, new Vector3( 0, 0, 0 ), new Quaternion( ) );
+            autoFigure.transform.localPosition = new Vector3( 0, 0, 0 );
+            var interfaceFigure = autoFigure.GetComponent<IAutoFigure>( );
+            if ( interfaceFigure != null ) {
+                interfaceFigure.text = caption;
             }
+        }catch(Exception ex ) {
+            UnityEngine.Debug.LogException( ex );
         }
     }
 }

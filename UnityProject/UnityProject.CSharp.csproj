@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.5f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -129,7 +131,12 @@
     <Compile Include="Assets\Scripts\Menus\Lecturer\LecturerMenus.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuScenario\ButtonItem.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuScenario\MainScenario.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\ImgButton.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\MainTraining.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\PrefabController\ContainerCamera.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\PrefabController\Controller.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\PrefabController\TargerController.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\Top\MenuTop.cs" />
     <Compile Include="Assets\Scripts\Menus\ManagerMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\MenuDescription.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\CodeCommands.cs" />
@@ -156,6 +163,7 @@
     <Compile Include="Assets\Scripts\PhotonServer\PhotonServerTCP.cs" />
     <Compile Include="Assets\Scripts\PhotonServer\ThreadPhotonServer.cs" />
     <Compile Include="Assets\Scripts\Settings\ApplicationConfig.cs" />
+    <Compile Include="Assets\Scripts\Settings\Scenario\XmlDesc.cs" />
     <Compile Include="Assets\Scripts\Settings\Scenario\XmlItem.cs" />
     <Compile Include="Assets\Scripts\Settings\Scenario\XmlScenario.cs" />
     <Compile Include="Assets\Scripts\TestRotation.cs" />
@@ -169,5 +177,6 @@
     <None Include="Assets\StreamingAssets\Application\scenario.xml" />
     <None Include="Assets\StreamingAssets\Scenarios\Scenario_1\description.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

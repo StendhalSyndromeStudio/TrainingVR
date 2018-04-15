@@ -23,6 +23,11 @@ namespace Assets.Scripts.Menus.Lecturer.MenuScenario {
         /// СОБЫТИЕ: Клик по объекту
         /// </summary>
         event ButtonItem.ButtonDelegate OnClick;
+
+        /// <summary>
+        /// СВОЙСТВО: XmlItem
+        /// </summary>
+        Settings.Scenario.XmlItem XmlItem { get; }
     }
 
     /// <summary>
@@ -57,6 +62,11 @@ namespace Assets.Scripts.Menus.Lecturer.MenuScenario {
             add { this.onClick.Add( value ); }
             remove { this.onClick.Remove( value ); }
         }
+
+        /// <summary>
+        /// СВОЙСТВО: XmlItem
+        /// </summary>
+        Settings.Scenario.XmlItem IItem.XmlItem { get { return this.XmlItem; } }
         #endregion
 
         #region --[COMPONENT]--

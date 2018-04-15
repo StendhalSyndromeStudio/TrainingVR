@@ -21,7 +21,10 @@ namespace Assets.Scripts.Menus.Lecturer.MenuScenario {
         /// </summary>
         /// <param name="args"></param>
         void IMenu.SetArgs( params object[ ] args ) { }
-
+        /// <summary>
+        /// СВОЙСТВО: Переход между меню
+        /// </summary>
+        public GoToMenuDelegate GoToMenu { get; set; }
         #endregion
 
         /// <summary>
@@ -69,7 +72,8 @@ namespace Assets.Scripts.Menus.Lecturer.MenuScenario {
         /// </summary>
         /// <param name="item"></param>
         private void Item_Click( IItem item ) {
-
+            if (this.GoToMenu == null ) { return; }
+            this.GoToMenu.Invoke( "training", item.XmlItem.Resource );
         }
     }
 }

@@ -8,17 +8,17 @@ namespace Assets.Scripts.Menus {
     /// КЛАСС: Описание коллекции
     /// </summary>
     [System.Serializable]
-    internal class CollectionDescription {
+    internal struct CollectionDescription {
 
         /// <summary>
         /// ПОЛЕ: Имя
         /// </summary>
-        [UnityEngine.Header("Имя:")]
-        public string Name = String.Empty;
+        [UnityEngine.Header( "Тип:" )]
+        public ModeType Mode;
         /// <summary>
         /// ПОЛЕ: Объект
         /// </summary>
-        [UnityEngine.Header("Объект:")]
+        [ UnityEngine.Header("Объект:")]
         public UnityEngine.GameObject GameObject;
     }
 }

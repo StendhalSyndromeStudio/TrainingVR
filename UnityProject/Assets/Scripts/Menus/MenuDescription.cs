@@ -23,6 +23,13 @@ namespace Assets.Scripts.Menus {
     }
 
     /// <summary>
+    /// ДЕЛЕГАТ: Сигнатура метода перехода между меню
+    /// </summary>
+    /// <param name="code">идентификатор меню</param>
+    /// <param name="args">передаваемые параметры</param>
+    public delegate void GoToMenuDelegate( string code, params object[ ] args );
+
+    /// <summary>
     /// ИНТЕРФЕЙС: Меню
     /// </summary>
     internal interface IMenu {
@@ -31,6 +38,10 @@ namespace Assets.Scripts.Menus {
         /// СВОЙСТВО: Активность
         /// </summary>
         bool IsActive { get; }
+        /// <summary>
+        /// СВОЙСТВО: Переход между меню
+        /// </summary>
+        GoToMenuDelegate GoToMenu { get; set; }
         #endregion
 
         #region --[МЕТОД]--
@@ -47,6 +58,7 @@ namespace Assets.Scripts.Menus {
         /// </summary>
         /// <param name="args"></param>
         void SetArgs( params object[ ] args );
+        
         #endregion
     }
 }
