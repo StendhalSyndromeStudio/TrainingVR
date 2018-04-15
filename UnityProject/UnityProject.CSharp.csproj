@@ -117,21 +117,34 @@
     <Compile Include="Assets\Scripts\Blocks\Btn.cs" />
     <Compile Include="Assets\Scripts\Blocks\Diod.cs" />
     <Compile Include="Assets\Scripts\Blocks\Mielophone\MielophoneLogic.cs" />
+    <Compile Include="Assets\Scripts\Blocks\SkyboxSetter.cs" />
     <Compile Include="Assets\Scripts\Blocks\Switch.cs" />
-    <Compile Include="Assets\Scripts\Drawing\Paint.cs" />
-    <Compile Include="Assets\Scripts\Drawing\TestDraw.cs" />
+    <Compile Include="Assets\Scripts\CloudRotation.cs" />
     <Compile Include="Assets\Scripts\Element\Block_Button.cs" />
     <Compile Include="Assets\Scripts\Element\Block_Diod.cs" />
     <Compile Include="Assets\Scripts\Element\Block_Switch.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\AsynchronousClientExample.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\IExternalDevices.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\IReadDataFromSocketClass.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\MainSocketClient.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\SocketClient.cs" />
+    <Compile Include="Assets\Scripts\ExternalDevices\TrackingSocketClient.cs" />
     <Compile Include="Assets\Scripts\MainTrenag.cs" />
     <Compile Include="Assets\Scripts\Menus\CollectionDescription.cs" />
     <Compile Include="Assets\Scripts\Menus\IMenusCollection.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\LecturerMenus.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuScenario\ButtonItem.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuScenario\MainScenario.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\ImgButton.cs" />
     <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\MainTraining.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\PrefabController\ContainerCamera.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\PrefabController\Controller.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\PrefabController\TargerController.cs" />
+    <Compile Include="Assets\Scripts\Menus\Lecturer\MenuTraining\Top\MenuTop.cs" />
     <Compile Include="Assets\Scripts\Menus\ManagerMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\MenuDescription.cs" />
+    <Compile Include="Assets\Scripts\Menus\Training\MenuTraining\MainTraining.cs" />
+    <Compile Include="Assets\Scripts\Menus\Training\TrainingMenus.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\CodeCommands.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\ExPhotonBehaviour.cs" />
     <Compile Include="Assets\Scripts\PhotonNetworkView\IPhotonComponent.cs" />
@@ -155,19 +168,29 @@
     <Compile Include="Assets\Scripts\PhotonServer\PhotonManager.cs" />
     <Compile Include="Assets\Scripts\PhotonServer\PhotonServerTCP.cs" />
     <Compile Include="Assets\Scripts\PhotonServer\ThreadPhotonServer.cs" />
+    <Compile Include="Assets\Scripts\RevealNightEarthTexture.cs" />
     <Compile Include="Assets\Scripts\Settings\ApplicationConfig.cs" />
+    <Compile Include="Assets\Scripts\Settings\Scenario\XmlDesc.cs" />
     <Compile Include="Assets\Scripts\Settings\Scenario\XmlItem.cs" />
     <Compile Include="Assets\Scripts\Settings\Scenario\XmlScenario.cs" />
+    <Compile Include="Assets\Scripts\Stereo\EyePair.cs" />
+    <Compile Include="Assets\Scripts\Stereo\FreeCamera.cs" />
+    <Compile Include="Assets\Scripts\Stereo\StereoscopeEye.cs" />
+    <Compile Include="Assets\Scripts\Stereo\VRCursor.cs" />
     <Compile Include="Assets\Scripts\TestRotation.cs" />
     <Compile Include="Assets\Scripts\XmlDeserialization.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\PhotonServer\Photon3Unity3D.xml" />
     <None Include="Assets\Plugins\PhotonServer\UnityEngine.xml" />
+    <None Include="Assets\Shaders\DisplayNightEarthTexture.shader" />
+    <None Include="Assets\Shaders\Glow.shader" />
     <None Include="Assets\Sprites\SolarSystem\nasa\license.txt" />
     <None Include="Assets\Sprites\SolarSystem\solarsystemscope\license.txt" />
+    <None Include="Assets\StreamingAssets\Application\ExternalDevices.xml" />
     <None Include="Assets\StreamingAssets\Application\scenario.xml" />
     <None Include="Assets\StreamingAssets\Scenarios\Scenario_1\description.xml" />
+    <None Include="Assets\StreamingAssets\Scenarios\Scenario_2\description.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

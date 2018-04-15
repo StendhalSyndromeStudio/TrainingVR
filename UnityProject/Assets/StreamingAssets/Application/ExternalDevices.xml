@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <servers>
+    <server ip="127.0.0.1" port="20000"/>
+  </servers>
+</settings>
