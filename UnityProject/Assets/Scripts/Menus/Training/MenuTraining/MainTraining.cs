@@ -29,10 +29,12 @@ namespace Assets.Scripts.Menus.Training.MenuTraining {
 
 
         private void Show( ) {
+            if ( MainTrenag.Instance.Config.Visual.Mode != ModeVisual.normal ) { return; }
             this.gameObject.SetActive( true );
         }
 
         private void Hide( ) {
+            if ( MainTrenag.Instance.Config.Visual.Mode != ModeVisual.normal ) { return; }
             this.gameObject.SetActive( false );
         }
 

@@ -34,10 +34,6 @@ namespace Assets.Scripts.Menus.Lecturer.MenuTraining {
         [SerializeField]
         public MenuTraining.Top.MenuTop Top;
 
-        [Header( "PrefabController:" )]
-        [SerializeField]
-        public MenuTraining.PrefabController.Controller PrefabController;
-
         #region --[PRIVATE]--
         /// <summary>
         /// ПОЛЕ: Текущие описание
