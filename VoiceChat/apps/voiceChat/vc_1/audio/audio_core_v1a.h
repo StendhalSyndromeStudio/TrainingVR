@@ -16,7 +16,7 @@ namespace vc_1 {
 
     // AudioCore interface
   public:
-    virtual voice_chat::AudioIoHandler audioHandler() const;
+    virtual voice_chat::AudioIoHandler *audioHandler() const;
     virtual Mode mode() const;
 
   public slots:
