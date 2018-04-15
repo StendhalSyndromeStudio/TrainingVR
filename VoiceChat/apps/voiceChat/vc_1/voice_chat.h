@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QWidget>
 
+#include <QSystemTrayIcon>
+
 #include "ivoice_chat.h"
 
 namespace vc_1
@@ -12,6 +14,9 @@ namespace vc_1
   class VoiceChat : public IVoiceChat
   {
     Q_OBJECT
+
+
+    QSystemTrayIcon _tray;
   public:
     explicit VoiceChat(QObject *parent = nullptr);
     ~VoiceChat();

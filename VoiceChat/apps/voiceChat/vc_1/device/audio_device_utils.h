@@ -19,6 +19,11 @@ namespace vc_1 {
   {
     Q_OBJECT
   public:
+    enum class Status
+    {
+      Starting = 0, Running, Error
+    };
+
     enum class Mode
     {
       Input, Output
@@ -26,6 +31,8 @@ namespace vc_1 {
 
     using Handler = std::function<bool()>;
   private:
+    Status  _status;
+
     bool active;
     bool running;
 
@@ -45,6 +52,8 @@ namespace vc_1 {
     ~AudioDeviceUtils();
   public:
     void stop();
+    Status status() const;
+
   protected:
     void run();
   private:

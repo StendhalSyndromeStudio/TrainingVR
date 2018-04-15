@@ -3,6 +3,7 @@ using namespace vc_1;
 
 AudioIoHandler_v1a::AudioIoHandler_v1a(QObject *parent)
   : voice_chat::AudioIoHandler(parent)
+  , _device ( new AudioDevice() )
 {
 
 }
@@ -12,55 +13,74 @@ AudioIoHandler_v1a::~AudioIoHandler_v1a()
 
 }
 
-
 bool vc_1::AudioIoHandler_v1a::isPlaying() const
 {
-
-  throw ( "Not implemented" ); //TODO
+  return _device->isPlaying();
 }
 
 bool vc_1::AudioIoHandler_v1a::isRecording() const
 {
-  throw ( "Not implemented" ); //TODO
+  return _device->isRecording();
 }
 
 
 double vc_1::AudioIoHandler_v1a::recLevel() const
 {
-  throw ( "Not implemented" ); //TODO
+  return 0.0;
 }
 
 double vc_1::AudioIoHandler_v1a::playLevel() const
 {
-  throw ( "Not implemented" ); //TODO
+  return 0.0;
+}
+
+voice_chat::AudioIoHandler::Merger AudioIoHandler_v1a::output() const
+{
+  return _output;
+}
+
+voice_chat::AudioIoHandler::Splitter AudioIoHandler_v1a::input() const
+{
+  return _input;
 }
 
 bool vc_1::AudioIoHandler_v1a::initilize()
 {
-  throw ( "Not implemented" ); //TODO
+
+  return true;
 }
 
 void vc_1::AudioIoHandler_v1a::free()
 {
-  throw ( "Not implemented" ); //TODO
+
 }
 
 voice_chat::AudioIoHandler::Error vc_1::AudioIoHandler_v1a::startPlay() const
 {
-  throw ( "Not implemented" ); //TODO
+  if ( _device->play( _output ) )
+  {
+    return voice_chat::AudioIoHandler::Error::NoError;
+  }
+
+  return voice_chat::AudioIoHandler::Error::UnknowError;
 }
 
 voice_chat::AudioIoHandler::Error vc_1::AudioIoHandler_v1a::startRecord() const
 {
-  throw ( "Not implemented" ); //TODO
+  if ( _device->record( _input ) )
+  {
+    return voice_chat::AudioIoHandler::Error::NoError;
+  }
+
+  return voice_chat::AudioIoHandler::Error::UnknowError;
 }
 
 void vc_1::AudioIoHandler_v1a::stopPlaying() const
 {
-  throw ( "Not implemented" ); //TODO
+  _device->stopPlaying();
 }
 
 void vc_1::AudioIoHandler_v1a::stopRecording() const
 {
-  throw ( "Not implemented" ); //TODO
+  _device->stopRecording();
 }

@@ -6,8 +6,14 @@ using namespace vc_1;
 
 #include <voice_chat/audio_io_stream.h>
 
+AudioDeviceUtils::Status AudioDeviceUtils::status() const
+{
+  return _status;
+}
+
 AudioDeviceUtils::AudioDeviceUtils(Mode mode, std::shared_ptr<voice_chat::AudioIoStream> stream)
   : QThread()
+  , _status ( Status::Starting )
   , stream ( stream )
   , _audioInput ( nullptr )
   , _audioOutput ( nullptr )
@@ -82,10 +88,12 @@ bool AudioDeviceUtils::inputHandler()
       delete _audioInput;
       _audioInput = nullptr;
 
+      _status = Status::Error;
       return false;
     }
 
     msleep( 200 );
+    _status = Status::Running;
   }
   else
   {
@@ -125,9 +133,11 @@ bool AudioDeviceUtils::outputHandler()
       delete _audioOutput;
       _audioOutput = nullptr;
 
+      _status = Status::Error;
       return false;
     }
 
+    _status = Status::Running;
     msleep( 200 );
   }
   else
