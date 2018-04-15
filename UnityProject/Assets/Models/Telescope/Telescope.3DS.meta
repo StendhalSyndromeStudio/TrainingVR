@@ -1,0 +1,265 @@
+fileFormatVersion: 2
+guid: 939abeea1843e6e4b919802c1c7ec986
+timeCreated: 1523744322
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: altitude 0
+    100002: altitude 1
+    100004: altitude a
+    100006: base
+    100008: 'bolts '
+    100010: eyepiece
+    100012: 'eyepieces '
+    100014: eyepieces0
+    100016: eyepieces1
+    100018: fingersco0
+    100020: fingersco1
+    100022: fingersco2
+    100024: fingerscop
+    100026: focuser ax
+    100028: focuser bo
+    100030: focuser m0
+    100032: focuser ma
+    100034: focuser tw
+    100036: hand
+    100038: 'justings '
+    100040: leg 01
+    100042: leg 02
+    100044: leg 03
+    100046: leg 04
+    100048: lens
+    100050: main tube
+    100052: 'main tube '
+    100054: main tube0
+    100056: middle des
+    100058: primary mi
+    100060: side 01
+    100062: side 02
+    100064: //RootNode
+    100066: top bolts
+    100068: twister 01
+    100070: twister 02
+    100072: twister 03
+    100074: twister 04
+    100076: twister 05
+    100078: twister 06
+    400000: altitude 0
+    400002: altitude 1
+    400004: altitude a
+    400006: base
+    400008: 'bolts '
+    400010: eyepiece
+    400012: 'eyepieces '
+    400014: eyepieces0
+    400016: eyepieces1
+    400018: fingersco0
+    400020: fingersco1
+    400022: fingersco2
+    400024: fingerscop
+    400026: focuser ax
+    400028: focuser bo
+    400030: focuser m0
+    400032: focuser ma
+    400034: focuser tw
+    400036: hand
+    400038: 'justings '
+    400040: leg 01
+    400042: leg 02
+    400044: leg 03
+    400046: leg 04
+    400048: lens
+    400050: main tube
+    400052: 'main tube '
+    400054: main tube0
+    400056: middle des
+    400058: primary mi
+    400060: side 01
+    400062: side 02
+    400064: //RootNode
+    400066: top bolts
+    400068: twister 01
+    400070: twister 02
+    400072: twister 03
+    400074: twister 04
+    400076: twister 05
+    400078: twister 06
+    2300000: altitude 0
+    2300002: altitude 1
+    2300004: altitude a
+    2300006: base
+    2300008: 'bolts '
+    2300010: eyepiece
+    2300012: 'eyepieces '
+    2300014: eyepieces0
+    2300016: eyepieces1
+    2300018: fingersco0
+    2300020: fingersco1
+    2300022: fingersco2
+    2300024: fingerscop
+    2300026: focuser ax
+    2300028: focuser bo
+    2300030: focuser m0
+    2300032: focuser ma
+    2300034: focuser tw
+    2300036: hand
+    2300038: 'justings '
+    2300040: leg 01
+    2300042: leg 02
+    2300044: leg 03
+    2300046: leg 04
+    2300048: lens
+    2300050: main tube
+    2300052: 'main tube '
+    2300054: main tube0
+    2300056: middle des
+    2300058: primary mi
+    2300060: side 01
+    2300062: side 02
+    2300064: top bolts
+    2300066: twister 01
+    2300068: twister 02
+    2300070: twister 03
+    2300072: twister 04
+    2300074: twister 05
+    2300076: twister 06
+    3300000: altitude 0
+    3300002: altitude 1
+    3300004: altitude a
+    3300006: base
+    3300008: 'bolts '
+    3300010: eyepiece
+    3300012: 'eyepieces '
+    3300014: eyepieces0
+    3300016: eyepieces1
+    3300018: fingersco0
+    3300020: fingersco1
+    3300022: fingersco2
+    3300024: fingerscop
+    3300026: focuser ax
+    3300028: focuser bo
+    3300030: focuser m0
+    3300032: focuser ma
+    3300034: focuser tw
+    3300036: hand
+    3300038: 'justings '
+    3300040: leg 01
+    3300042: leg 02
+    3300044: leg 03
+    3300046: leg 04
+    3300048: lens
+    3300050: main tube
+    3300052: 'main tube '
+    3300054: main tube0
+    3300056: middle des
+    3300058: primary mi
+    3300060: side 01
+    3300062: side 02
+    3300064: top bolts
+    3300066: twister 01
+    3300068: twister 02
+    3300070: twister 03
+    3300072: twister 04
+    3300074: twister 05
+    3300076: twister 06
+    4300000: base
+    4300002: side 01
+    4300004: middle des
+    4300006: leg 01
+    4300008: 'eyepieces '
+    4300010: 'bolts '
+    4300012: hand
+    4300014: fingerscop
+    4300016: altitude a
+    4300018: focuser bo
+    4300020: twister 06
+    4300022: focuser ma
+    4300024: eyepieces0
+    4300026: lens
+    4300028: eyepiece
+    4300030: focuser ax
+    4300032: focuser tw
+    4300034: eyepieces1
+    4300036: fingersco0
+    4300038: twister 03
+    4300040: fingersco1
+    4300042: fingersco2
+    4300044: altitude 0
+    4300046: altitude 1
+    4300048: primary mi
+    4300050: 'justings '
+    4300052: 'main tube '
+    4300054: main tube0
+    4300056: top bolts
+    4300058: main tube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
