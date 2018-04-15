@@ -51,6 +51,17 @@ namespace vc_1 {
     virtual void add(const StreamPtr &stream);
     virtual void remove(const StreamPtr &stream);
     virtual void removeAll();
+
+    // AudioIoStream interface
+  public:
+    virtual quint64 size() const override;
+    virtual quint64 bufferSize() const override;
+    virtual QByteArray read(quint64 size) const override;
+    virtual quint64 read(char *data, quint64 length) const override;
+
+  public slots:
+    virtual QByteArray take(quint64 length) override;
+    virtual quint64 take(char *data, quint64 length) override;
   };
 
 }

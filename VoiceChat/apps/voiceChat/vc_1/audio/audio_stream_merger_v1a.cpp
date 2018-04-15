@@ -40,7 +40,7 @@ void AudioStreamMergerUtils::run()
   auto time = 0.5;
 
   auto size         = static_cast<quint64>( freq * time );
-  auto readDataSize = static_cast<quint64>( size * sizeof(float) );
+  auto readDataSize = 960 * 8; //static_cast<quint64>( size * sizeof(float) );
 
   auto *data        = new float[ size ];
 
@@ -59,6 +59,10 @@ void AudioStreamMergerUtils::run()
         if ( s->size() >= readDataSize )
         {
           temp << s;
+        }
+        else
+        {
+          printf( "%d \n", s->size() );
         }
       }
 
@@ -109,8 +113,10 @@ void AudioStreamMergerUtils::run()
 
 //--------------- Base class ------------------------------
 
+#include "vc_1/audio/audio_io_stream_v1a.h"
 AudioStreamMerger_v1a::AudioStreamMerger_v1a()
   : _utils ( new AudioStreamMergerUtils( this ) )
+  , _output ( new vc_1::AudioIoStream_v1a() )
 {
 
   _utils->start();
@@ -163,4 +169,35 @@ void AudioStreamMerger_v1a::removeAll()
 {
   std::lock_guard<std::mutex> inLocker( _inputMutex );
   _input.clear();
+}
+
+
+quint64 vc_1::AudioStreamMerger_v1a::size() const
+{
+  return _output->size();
+}
+
+quint64 vc_1::AudioStreamMerger_v1a::bufferSize() const
+{
+  return _output->bufferSize();
+}
+
+QByteArray vc_1::AudioStreamMerger_v1a::read(quint64 size) const
+{
+  return _output->read(size);
+}
+
+quint64 vc_1::AudioStreamMerger_v1a::read(char *data, quint64 length) const
+{
+  return _output->read(data, length);
+}
+
+QByteArray vc_1::AudioStreamMerger_v1a::take(quint64 length)
+{
+  return _output->take(length);
+}
+
+quint64 vc_1::AudioStreamMerger_v1a::take(char *data, quint64 length)
+{
+  return _output->take(data,length);
 }

@@ -27,14 +27,22 @@ VoiceChat::~VoiceChat()
 
 #include "vc_1/device/audio_device.h"
 #include "vc_1/audio/audio_io_stream_v1a.h"
+#include "vc_1/network/udp/udp_audio_server_v1a.h"
 
 bool VoiceChat::initilize()
 {
-  auto stream = std::make_shared<AudioIoStream_v1a>();
+//  auto stream = std::make_shared<AudioIoStream_v1a>();
   auto *device = new AudioDevice();
 
-  device->play( stream );
-  device->record( stream );
+//  device->play( stream );
+//  device->record( stream );
+
+  auto *udpServer = new UdpAudioServer_v1a();
+  udpServer->add( UdpAudioServer::Destination{ QHostAddress::LocalHost, 48000 } );
+  udpServer->add( UdpAudioServer::Destination{ QHostAddress::LocalHost, 48000 } );
+
+  device->play( udpServer->input() );
+  device->record( udpServer->output() );
 
   _tray.showMessage( "Информация", "Модуль голосовой связи запущен" );
   return true;
