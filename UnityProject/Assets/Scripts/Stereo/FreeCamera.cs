@@ -103,7 +103,7 @@ public class FreeCamera : MonoBehaviour
             var zoomSensitivity = fastMode ? this.fastZoomSensitivity : this.zoomSensitivity;
             transform.position = transform.position + transform.forward * axis * zoomSensitivity;
         }
-
+        
         if ( Input.GetKeyDown( KeyCode.Mouse1 ) )
         {
             StartLooking( );
@@ -125,8 +125,8 @@ public class FreeCamera : MonoBehaviour
     public void StartLooking ( )
     {
         looking = true;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        /*Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;*/
     }
 
     /// <summary>
@@ -135,7 +135,7 @@ public class FreeCamera : MonoBehaviour
     public void StopLooking ( )
     {
         looking = false;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        /*Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;*/
     }
 }

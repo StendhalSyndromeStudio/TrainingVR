@@ -33,6 +33,9 @@ public class MainTrenag : MonoBehaviour {
     /// СВОЙСТВО: Путь до файла конфигурации
     /// </summary>
     public string PathSetting = "Application/config.xml";
+
+    [Header( "EyePair:" )]
+    public EyePair EyePair;
     #endregion
 
     #region --[PRIVATE]--
@@ -75,13 +78,15 @@ public class MainTrenag : MonoBehaviour {
     /// </summary>
     private void StatusConnect_Change( object sender, object value ) {
         if (PhotonServerTCP.Instance.StatusConnect.Value != ExitGames.Client.Photon.StatusCode.Connect ) { return; }
+   
         switch ( this.Config.Visual.Mode ) {
             case ModeVisual.normal: {
-
-                }break;
+                    this.EyePair.Vr = false;
+                } break;
             case ModeVisual.vr: {
-
-                }break;
+                    this.EyePair.Vr = true;
+                }
+                break;
         }
     }
 }
