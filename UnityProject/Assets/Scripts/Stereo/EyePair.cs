@@ -169,7 +169,6 @@ public class EyePair : MonoBehaviour {
             }
             
             if ( Input.GetMouseButtonUp( 0 ) ) {
-                Debug.Log( "MouseUp" );
                 if ( target != null )
                 {
                     Debug.Log( target.name );
