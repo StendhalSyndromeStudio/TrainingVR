@@ -8,6 +8,7 @@ using namespace vc_1;
 
 AudioIoStream_v1a::AudioIoStream_v1a(QObject *parent)
   : voice_chat::AudioIoStream(parent)
+  , _bufferSize ( 48000 * 4 * 3.5 )
 {
 
 }
