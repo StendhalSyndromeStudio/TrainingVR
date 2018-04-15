@@ -358,7 +358,7 @@ public class PhotonServerTCP : MonoBehaviour, IPhotonPeerListener
     {
         try
         {
-            
+            UnityEngine.Debug.Log( "<<1>>" );
             threadPhoton.OpCustom(this, (byte)OperationCode.NetWorkUnity, new Dictionary<byte, object>
 
             {

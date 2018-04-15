@@ -11,3 +11,8 @@ AudioIoStream::~AudioIoStream()
 {
 
 }
+
+void AudioIoStream::clear()
+{
+  take( size() );
+}

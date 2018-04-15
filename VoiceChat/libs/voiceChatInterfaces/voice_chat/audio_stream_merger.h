@@ -9,7 +9,7 @@
 
 namespace voice_chat {
 
-  class AudioStreamMerger
+  class AudioStreamMerger: public voice_chat::AudioIoStream
   {
   public:
     using StreamPtr = std::shared_ptr<AudioIoStream>;
@@ -22,10 +22,6 @@ namespace voice_chat {
     /// \brief Формат аудио файла
     ///
     virtual AudioFormat format() const = 0;
-    ///
-    /// \brief Стрим результата слияния
-    ///
-    virtual StreamPtr output() const = 0;
 
     ///
     /// \brief Список стримов для слияния
@@ -38,9 +34,14 @@ namespace voice_chat {
     virtual int count() const = 0;
   public:
     virtual void setFormat(AudioFormat format) = 0;
-    virtual void setOutput(const StreamPtr &stream) = 0;
     virtual void add(const StreamPtr &stream) = 0;
     virtual void remove(const StreamPtr &stream) = 0;
+    virtual void removeAll() = 0;
+
+    // AudioIoStream interface
+  public slots:
+    virtual quint64 write(const QByteArray &data);
+    virtual quint64 write(const char *data, quint64 length);
   };
 
 

@@ -9,21 +9,6 @@ using namespace vc_1;
 
 //----------------- AudioStreamMergerUtils ----------------------
 
-class AudioStreamMergerUtils: public QThread
-{
-  bool  active;
-  bool  running;
-
-  AudioStreamMerger_v1a *merger;
-public:
-  AudioStreamMergerUtils(AudioStreamMerger_v1a *merger);
-  ~AudioStreamMergerUtils();
-public:
-  void stop();
-protected:
-  void run();
-};
-
 AudioStreamMergerUtils::AudioStreamMergerUtils(AudioStreamMerger_v1a *merger)
   : QThread()
   , merger (merger)
@@ -80,7 +65,7 @@ void AudioStreamMergerUtils::run()
       if ( !temp.isEmpty() )
       {
         auto fd = temp.first();
-        fd->take<float>( data, size );
+        voice_chat::AudioIoStream::take<float>( fd.get(), data, size );
 
         if ( !temp.isEmpty() )
         {
@@ -88,7 +73,7 @@ void AudioStreamMergerUtils::run()
 
           while ( !temp.isEmpty() )
           {
-            temp.takeFirst()->take<float>( tempData, size );
+            voice_chat::AudioIoStream::take<float>( temp.takeFirst().get(), tempData, size );
 
             for ( int i = 0; i < size; ++i )
             {
@@ -98,8 +83,8 @@ void AudioStreamMergerUtils::run()
 
           if ( merger->_output )
           {
-            std::lock_guard<std::mutex> outputLocker( merger->_outMutex );
-            merger->_output->write<float>( data, size );
+            std::lock_guard<std::mutex> outputLocker( merger->_outputMutex );
+            voice_chat::AudioIoStream::write<float>(merger->_output.get(), data, size );
           }
 
           delete []tempData;
@@ -125,10 +110,10 @@ void AudioStreamMergerUtils::run()
 //--------------- Base class ------------------------------
 
 AudioStreamMerger_v1a::AudioStreamMerger_v1a()
-  : _utils ( new AudioStreamMerger( this ) )
+  : _utils ( new AudioStreamMergerUtils( this ) )
 {
 
-
+  _utils->start();
 }
 
 AudioStreamMerger_v1a::~AudioStreamMerger_v1a()
@@ -140,11 +125,6 @@ AudioStreamMerger_v1a::~AudioStreamMerger_v1a()
 voice_chat::AudioFormat vc_1::AudioStreamMerger_v1a::format() const
 {
   return _format;
-}
-
-voice_chat::AudioStreamMerger::StreamPtr vc_1::AudioStreamMerger_v1a::output() const
-{
-  return _output;
 }
 
 QList<voice_chat::AudioStreamMerger::StreamPtr> vc_1::AudioStreamMerger_v1a::input() const
@@ -165,13 +145,6 @@ void vc_1::AudioStreamMerger_v1a::setFormat(voice_chat::AudioFormat format)
   _format = format;
 }
 
-void vc_1::AudioStreamMerger_v1a::setOutput(const voice_chat::AudioStreamMerger::StreamPtr &stream)
-{
-  std::lock_guard<std::mutex> outLocker( _outputMutex );
-
-  _output = stream;
-}
-
 void vc_1::AudioStreamMerger_v1a::add(const voice_chat::AudioStreamMerger::StreamPtr &stream)
 {
   std::lock_guard<std::mutex> inLocker( _inputMutex );
@@ -184,4 +157,10 @@ void vc_1::AudioStreamMerger_v1a::remove(const voice_chat::AudioStreamMerger::St
   std::lock_guard<std::mutex> inLocker( _inputMutex );
 
   _input.removeOne( stream );
+}
+
+void AudioStreamMerger_v1a::removeAll()
+{
+  std::lock_guard<std::mutex> inLocker( _inputMutex );
+  _input.clear();
 }

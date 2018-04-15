@@ -1,11 +1,14 @@
 #include "audio_io_stream_v1a.h"
 using namespace vc_1;
 
+#include <cmath>
+
 #define lockBuffer() \
-  std::lock_guard<std::mutex>(_bufferMutex)
+  std::lock_guard<std::mutex> locker(_bufferMutex)
 
 AudioIoStream_v1a::AudioIoStream_v1a(QObject *parent)
   : voice_chat::AudioIoStream(parent)
+  , _bufferSize ( 48000 * 4 * 3.5 )
 {
 
 }
@@ -30,7 +33,7 @@ quint64 vc_1::AudioIoStream_v1a::bufferSize() const
 QByteArray vc_1::AudioIoStream_v1a::read(quint64 size) const
 {
   lockBuffer();
-  size = std::min(size, _buffer.length());
+  size = std::min(static_cast<int>(size), _buffer.length());
 
   return _buffer.mid(0, size);
 }
@@ -38,7 +41,7 @@ QByteArray vc_1::AudioIoStream_v1a::read(quint64 size) const
 quint64 vc_1::AudioIoStream_v1a::read(char *data, quint64 length) const
 {
   lockBuffer();
-  size = std::min(size, _buffer.length());
+  auto size = std::min(length, static_cast<quint64>( _buffer.length() ));
   std::memcpy(_buffer.data(), data, length);
 
   return size;

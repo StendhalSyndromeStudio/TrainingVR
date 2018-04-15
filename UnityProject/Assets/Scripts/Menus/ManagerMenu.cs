@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 namespace Assets.Scripts.Menus {
     /// <summary>
@@ -38,15 +39,27 @@ namespace Assets.Scripts.Menus {
         /// </summary>
         private readonly UnityClientKSGT.EventValueType<ModeType> mode = new UnityClientKSGT.EventValueType<ModeType>( ModeType.none );
 
-        //private readonly Dictionary<>
+        /// <summary>
+        /// ПОЛЕ: Коллекция меню
+        /// </summary>
+        private readonly UnityClientKSGT.ObjectReference<IMenusCollection> menusCollection = new UnityClientKSGT.ObjectReference<IMenusCollection>( );
         #endregion
+
+        void Awake( ) {
+            this.menusCollection.OnDiscovered += this.MenusCollection_OnDiscovered;
+            this.menusCollection.OnLeave += this.MenusCollection_OnLeave;
+        }
+
+       
 
         // Use this for initialization
         void Start( ) {
             this.mode.AddingEvent( this, this.Mode_Change );
-            this.mode.Value = PhotonServerTCP.Instance.isServer ? ModeType.lecturer : ModeType.trainee; ;
+            PhotonServerTCP.Instance.StatusConnect.AddingEvent( this, this.StatusConnect_Change );
+            this.StatusConnect_Change( null, null );
         }
 
+       
         /// <summary>
         /// МЕТОД: Смена режима
         /// </summary>
@@ -55,13 +68,37 @@ namespace Assets.Scripts.Menus {
         private void Mode_Change( object Sender, object Value ) {
             switch ( this.mode.Value ) {
                 case ModeType.lecturer: {
-
+                        this.SelectMode( this.mode.Value );
                     }break;
                 case ModeType.trainee: {
-
-                    }break;
+                        this.SelectMode( this.mode.Value );
+                    }
+                    break;
             }
         }
 
+        private void StatusConnect_Change( object Sender, object Value ) {
+            if (PhotonServerTCP.Instance.StatusConnect.Value != ExitGames.Client.Photon.StatusCode.Connect ) { return; }
+            PhotonServerTCP.Instance.StatusConnect.Remove( this, this.StatusConnect_Change );
+            this.mode.Value = PhotonServerTCP.Instance.isServer ? ModeType.lecturer : ModeType.trainee;
+        }
+
+
+        private void SelectMode( ModeType mode ) {
+           GameObject gameObject = this.Collection.FirstOrDefault( ( element ) => { return element.Mode == mode; } ).GameObject;
+            if (gameObject == null ) {
+                this.menusCollection.Object = null;
+                return;
+            }
+            this.menusCollection.Object = gameObject.GetComponent<IMenusCollection>( );
+        }
+
+        private void MenusCollection_OnDiscovered( IMenusCollection value ) {
+            value.Show( );
+        }
+
+        private void MenusCollection_OnLeave( IMenusCollection value ) {
+            value.Hide( );
+        }
     }
 }
